@@ -324,7 +324,12 @@
   ];
 
   function browseIsOpen() { return browsePanel.classList.contains("browse-panel--open"); }
+  // 光る案内は、パネルを開くか結果を出したら止める
+  browseToggle.classList.add("browse-toggle--hint");
+  const stopBrowseHint = () => browseToggle.classList.remove("browse-toggle--hint");
+
   function setBrowseOpen(open) {
+    if (open) stopBrowseHint();
     browsePanel.classList.toggle("browse-panel--open", open);
     browseToggle.setAttribute("aria-expanded", open ? "true" : "false");
     browseToggle.classList.toggle("browse-toggle--open", open);
@@ -413,6 +418,7 @@
     upsView.hidden = true;
     nasView.hidden = false;
     state.mode = "nas";
+    stopBrowseHint();
     state.nasSku = it.label;
     state.nasCode = code;
 
@@ -1003,6 +1009,7 @@
 
   function selectUps(model) {
     state.mode = "ups";
+    stopBrowseHint();
     state.upsModel = model;
     emptyState.hidden = true;
     nasView.hidden = true;
