@@ -1,0 +1,5846 @@
+{
+ "note": "UPSの仕様（出力容量・運転時間など）。各メーカーの公開資料をもとに手作業で整備（2026-10-16）。運転時間は新品・25℃前後の目安で、メーカー公表の負荷点。スクレイパーでは更新しない。 outletsは出力コンセントの口数（backup＝停電時も給電、surgeOnly＝雷サージ保護のみで停電時は給電されない）。2026-10-16に各メーカー資料等で確認。",
+ "updatedAt": "2026-10-16",
+ "seriesAliases": {
+  "DL3115シリーズ": [
+   "DL3115-300JL",
+   "DL3115-420JL",
+   "DL3115-500JL",
+   "DL3115-650JL"
+  ]
+ },
+ "ups": [
+  {
+   "model": "SMT500J",
+   "maker": "apc",
+   "name": "APC Smart-UPS 500 LCD 100V",
+   "va": 500,
+   "watt": 360,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://www.se.com/jp/ja/product/SMT500J/",
+   "runtime": [
+    [
+     50,
+     121
+    ],
+    [
+     100,
+     58
+    ],
+    [
+     200,
+     24
+    ],
+    [
+     300,
+     13
+    ],
+    [
+     360,
+     8.9
+    ]
+   ],
+   "caution": null,
+   "memo": null,
+   "source": "https://download.se.com/files?p_Doc_Ref=SPD_SMT500J_Spec_JA",
+   "outlets": {
+    "backup": 6,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "SMT750J",
+   "maker": "apc",
+   "name": "APC Smart-UPS 750 LCD 100V",
+   "va": 750,
+   "watt": 500,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://www.se.com/jp/ja/product/SMT750J/",
+   "runtime": [
+    [
+     50,
+     103
+    ],
+    [
+     100,
+     50
+    ],
+    [
+     200,
+     22
+    ],
+    [
+     300,
+     12
+    ],
+    [
+     400,
+     7
+    ],
+    [
+     500,
+     5
+    ]
+   ],
+   "caution": null,
+   "memo": null,
+   "source": "https://download.se.com/files?p_Doc_Ref=SPD_SMT750J_Spec_JA",
+   "outlets": {
+    "backup": 6,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "SMT1000J",
+   "maker": "apc",
+   "name": "APC Smart-UPS 1000 LCD 100V",
+   "va": 1000,
+   "watt": 670,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://www.se.com/jp/ja/product/SMT1000J/",
+   "runtime": [
+    [
+     50,
+     183
+    ],
+    [
+     100,
+     100
+    ],
+    [
+     200,
+     45
+    ],
+    [
+     300,
+     25
+    ],
+    [
+     400,
+     15
+    ],
+    [
+     500,
+     10
+    ],
+    [
+     600,
+     7
+    ],
+    [
+     670,
+     6.1
+    ]
+   ],
+   "caution": null,
+   "memo": null,
+   "source": "https://download.se.com/files?p_Doc_Ref=SPD_SMT1000J_Spec_JA",
+   "outlets": {
+    "backup": 8,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "SMT1500J",
+   "maker": "apc",
+   "name": "APC Smart-UPS 1500 LCD 100V",
+   "va": 1200,
+   "watt": 980,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://www.se.com/jp/ja/product/SMT1500J/",
+   "runtime": [
+    [
+     50,
+     301
+    ],
+    [
+     100,
+     172
+    ],
+    [
+     200,
+     84
+    ],
+    [
+     300,
+     51
+    ],
+    [
+     400,
+     33
+    ],
+    [
+     500,
+     23
+    ],
+    [
+     600,
+     17
+    ],
+    [
+     700,
+     12
+    ],
+    [
+     800,
+     10
+    ],
+    [
+     900,
+     8
+    ],
+    [
+     980,
+     6.7
+    ]
+   ],
+   "caution": null,
+   "memo": "標準プラグ(5-15P)では1200VA/980W、5-20Pプラグ時1500VA",
+   "source": "https://download.se.com/files?p_Doc_Ref=SPD_SMT1500J_Spec_JA",
+   "outlets": {
+    "backup": 8,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "SMT2200J",
+   "maker": "apc",
+   "name": "APC Smart-UPS 2200 LCD 100V",
+   "va": 2200,
+   "watt": 1980,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://www.se.com/jp/ja/product/SMT2200J/",
+   "runtime": [
+    [
+     400,
+     88
+    ],
+    [
+     600,
+     52
+    ],
+    [
+     800,
+     34
+    ],
+    [
+     1000,
+     23
+    ],
+    [
+     1200,
+     17
+    ],
+    [
+     1400,
+     12
+    ],
+    [
+     1600,
+     9
+    ],
+    [
+     1800,
+     7
+    ],
+    [
+     1980,
+     6
+    ]
+   ],
+   "caution": null,
+   "memo": null,
+   "source": "https://download.se.com/files?p_Doc_Ref=SPD_SMT2200J_Spec_JA",
+   "outlets": {
+    "backup": 10,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R×8、5-20R×2",
+    "note": null
+   }
+  },
+  {
+   "model": "SMT3000J",
+   "maker": "apc",
+   "name": "APC Smart-UPS 3000 LCD 100V",
+   "va": 2400,
+   "watt": 2400,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://www.se.com/jp/ja/product/SMT3000J/",
+   "runtime": [
+    [
+     400,
+     71
+    ],
+    [
+     600,
+     44
+    ],
+    [
+     800,
+     31
+    ],
+    [
+     1000,
+     23
+    ],
+    [
+     1200,
+     17
+    ],
+    [
+     1400,
+     14
+    ],
+    [
+     1600,
+     11
+    ],
+    [
+     1800,
+     9
+    ],
+    [
+     1980,
+     7.5
+    ],
+    [
+     2200,
+     6.5
+    ],
+    [
+     2400,
+     5
+    ]
+   ],
+   "caution": "定格いっぱいまで使う場合は電気工事（ハードワイヤ接続）が必要です",
+   "memo": "3000VA/2700Wはハードワイヤ時。標準プラグ時2400VA/2400Wで登録",
+   "source": "https://download.se.com/files?p_Doc_Ref=SPD_SMT3000J_Spec_JA",
+   "outlets": {
+    "backup": 10,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R×8、5-20R×2",
+    "note": null
+   }
+  },
+  {
+   "model": "SMT1K2RJ1U",
+   "maker": "apc",
+   "name": "APC Smart-UPS 1200VA RM 1U LCD 100V",
+   "va": 1200,
+   "watt": 1000,
+   "form": "rack",
+   "rackU": 1,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://www.se.com/jp/ja/product/SMT1K2RJ1U/",
+   "runtime": [
+    [
+     100,
+     106
+    ],
+    [
+     200,
+     48
+    ],
+    [
+     300,
+     29
+    ],
+    [
+     400,
+     20
+    ],
+    [
+     500,
+     15
+    ],
+    [
+     600,
+     11
+    ],
+    [
+     700,
+     9
+    ],
+    [
+     800,
+     7
+    ],
+    [
+     900,
+     6
+    ],
+    [
+     1000,
+     4.5
+    ]
+   ],
+   "caution": null,
+   "memo": "SMT1200RMJ1Uの後継",
+   "source": "https://download.se.com/files?p_Doc_Ref=SPD_SMT1K2RJ1U_Spec_JA",
+   "outlets": {
+    "backup": 4,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "SMT750RMJ1U",
+   "maker": "apc",
+   "name": "APC Smart-UPS 750 RM 1U LCD 100V",
+   "va": 750,
+   "watt": 525,
+   "form": "rack",
+   "rackU": 1,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://www.se.com/jp/ja/product/SMT750RMJ1U/",
+   "runtime": [
+    [
+     52,
+     108
+    ],
+    [
+     70,
+     80
+    ],
+    [
+     140,
+     38
+    ],
+    [
+     210,
+     24
+    ],
+    [
+     280,
+     16
+    ],
+    [
+     350,
+     12
+    ],
+    [
+     420,
+     9
+    ],
+    [
+     490,
+     7
+    ],
+    [
+     525,
+     6
+    ]
+   ],
+   "caution": null,
+   "memo": "SUA750RMJ1UBの後継",
+   "source": "https://download.se.com/files?p_Doc_Ref=SPD_SMT750RMJ1U_Spec_JA",
+   "outlets": {
+    "backup": 4,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "SMT1200RMJ1U",
+   "maker": "apc",
+   "name": "APC Smart-UPS 1200 RM 1U LCD 100V",
+   "va": 1200,
+   "watt": 1000,
+   "form": "rack",
+   "rackU": 1,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "販売終了",
+   "url": "https://www.se.com/jp/ja/product/SMT1200RMJ1U/",
+   "runtime": [
+    [
+     100,
+     98
+    ],
+    [
+     200,
+     56
+    ],
+    [
+     300,
+     30
+    ],
+    [
+     400,
+     22
+    ],
+    [
+     500,
+     14
+    ],
+    [
+     600,
+     11
+    ],
+    [
+     700,
+     8
+    ],
+    [
+     800,
+     6
+    ],
+    [
+     900,
+     5
+    ],
+    [
+     1000,
+     3
+    ]
+   ],
+   "caution": null,
+   "memo": "2022/11/28販売終了、後継SMT1K2RJ1U",
+   "source": "https://download.se.com/files?p_Doc_Ref=SPD_SMT1200RMJ1U_Spec_JA",
+   "outlets": {
+    "backup": 4,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "SMT1500RMJ2U",
+   "maker": "apc",
+   "name": "APC Smart-UPS 1500 LCD RM 2U 100V",
+   "va": 1200,
+   "watt": 1200,
+   "form": "rack",
+   "rackU": 2,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://www.se.com/jp/ja/product/SMT1500RMJ2U/",
+   "runtime": [
+    [
+     200,
+     55
+    ],
+    [
+     300,
+     36
+    ],
+    [
+     400,
+     25
+    ],
+    [
+     500,
+     19
+    ],
+    [
+     600,
+     15
+    ],
+    [
+     700,
+     12
+    ],
+    [
+     800,
+     10
+    ],
+    [
+     900,
+     8
+    ],
+    [
+     1000,
+     7
+    ],
+    [
+     1200,
+     5
+    ]
+   ],
+   "caution": null,
+   "memo": "標準プラグでは1200VA、5-20Pプラグ時1500VA",
+   "source": "https://download.se.com/files?p_Doc_Ref=SPD_SMT1500RMJ2U_Spec_JA",
+   "outlets": {
+    "backup": 6,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "SMT3000RMJ2U",
+   "maker": "apc",
+   "name": "APC Smart-UPS 3000 LCD RM 2U 100V",
+   "va": 2400,
+   "watt": 2400,
+   "form": "rack",
+   "rackU": 2,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://www.se.com/jp/ja/product/SMT3000RMJ2U/",
+   "runtime": [
+    [
+     400,
+     43
+    ],
+    [
+     600,
+     28
+    ],
+    [
+     800,
+     20
+    ],
+    [
+     1000,
+     15
+    ],
+    [
+     1200,
+     11
+    ],
+    [
+     1400,
+     9
+    ],
+    [
+     1600,
+     7
+    ],
+    [
+     1800,
+     6
+    ],
+    [
+     2000,
+     5
+    ],
+    [
+     2200,
+     4
+    ],
+    [
+     2400,
+     3
+    ]
+   ],
+   "caution": "定格いっぱいまで使う場合は電気工事（ハードワイヤ接続）が必要です",
+   "memo": "3000VA/2700Wはハードワイヤ時。標準プラグ時2400VA/2400Wで登録",
+   "source": "https://download.se.com/files?p_Doc_Ref=SPD_SMT3000RMJ2U_Spec_JA",
+   "outlets": {
+    "backup": 8,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R×6、5-20R×2",
+    "note": null
+   }
+  },
+  {
+   "model": "SCL400RMJ1U",
+   "maker": "apc",
+   "name": "APC Smart-UPS Lithium-Ion 400VA 100V",
+   "va": 400,
+   "watt": 400,
+   "form": "rack",
+   "rackU": 1,
+   "topology": "常時商用",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://www.se.com/jp/ja/product/SCL400RMJ1U/",
+   "runtime": [
+    [
+     50,
+     34
+    ],
+    [
+     100,
+     18
+    ],
+    [
+     150,
+     12
+    ],
+    [
+     200,
+     9
+    ],
+    [
+     250,
+     7
+    ],
+    [
+     300,
+     6
+    ],
+    [
+     400,
+     4
+    ]
+   ],
+   "caution": null,
+   "memo": "リチウムイオン、ショートデプス1U",
+   "source": "https://download.se.com/files?p_Doc_Ref=SPD_SCL400RMJ1U_Spec_JA",
+   "outlets": {
+    "backup": 4,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "SUA750RMJ1UB",
+   "maker": "apc",
+   "name": "APC Smart-UPS 750 RM",
+   "va": 750,
+   "watt": 480,
+   "form": "rack",
+   "rackU": 1,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "販売終了",
+   "url": "https://www.se.com/jp/ja/product/SUA750RMJ1UB/",
+   "runtime": [
+    [
+     35,
+     74
+    ],
+    [
+     70,
+     48
+    ],
+    [
+     140,
+     23
+    ],
+    [
+     210,
+     15
+    ],
+    [
+     280,
+     11
+    ],
+    [
+     350,
+     9
+    ],
+    [
+     420,
+     7
+    ]
+   ],
+   "caution": null,
+   "memo": "2023/08/25販売終了、後継SMT750RMJ1U",
+   "source": "https://download.se.com/files?p_Doc_Ref=SPD_SUA750RMJ1UB_Spec_JA",
+   "outlets": {
+    "backup": 4,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": "口数は海外販売店の値"
+   }
+  },
+  {
+   "model": "BR400G-JP",
+   "maker": "apc",
+   "name": "APC RS 400",
+   "va": 400,
+   "watt": 240,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "販売終了",
+   "url": null,
+   "runtime": [
+    [
+     30,
+     105
+    ],
+    [
+     60,
+     47
+    ],
+    [
+     90,
+     28
+    ],
+    [
+     120,
+     19
+    ],
+    [
+     150,
+     13
+    ],
+    [
+     180,
+     9
+    ],
+    [
+     210,
+     7
+    ],
+    [
+     240,
+     5.5
+    ]
+   ],
+   "caution": null,
+   "memo": "後継BR400S-JP",
+   "source": "https://download.se.com/files?p_Doc_Ref=SPD_BR400G-JP_Spec_JA",
+   "outlets": {
+    "backup": 3,
+    "surgeOnly": 3,
+    "type": null,
+    "note": null
+   }
+  },
+  {
+   "model": "BR550G-JP",
+   "maker": "apc",
+   "name": "APC RS 550",
+   "va": 550,
+   "watt": 330,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "販売終了",
+   "url": null,
+   "runtime": [
+    [
+     30,
+     106
+    ],
+    [
+     60,
+     48
+    ],
+    [
+     90,
+     29
+    ],
+    [
+     120,
+     20
+    ],
+    [
+     150,
+     14
+    ],
+    [
+     180,
+     10
+    ],
+    [
+     210,
+     8
+    ],
+    [
+     240,
+     6
+    ],
+    [
+     270,
+     5
+    ],
+    [
+     300,
+     3.5
+    ],
+    [
+     330,
+     2.5
+    ]
+   ],
+   "caution": null,
+   "memo": "後継BR550S-JP",
+   "source": "https://download.se.com/files?p_Doc_Ref=SPD_BR400G-JP_Spec_JA",
+   "outlets": {
+    "backup": 3,
+    "surgeOnly": 3,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BR1000G-JP",
+   "maker": "apc",
+   "name": "APC RS 1000",
+   "va": 1000,
+   "watt": 600,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": null,
+   "salesStatus": "販売終了",
+   "url": null,
+   "runtime": [
+    [
+     60,
+     104
+    ],
+    [
+     120,
+     46
+    ],
+    [
+     180,
+     28
+    ],
+    [
+     240,
+     18
+    ],
+    [
+     300,
+     13
+    ],
+    [
+     360,
+     10
+    ],
+    [
+     420,
+     7
+    ],
+    [
+     480,
+     5
+    ],
+    [
+     540,
+     4
+    ],
+    [
+     600,
+     3
+    ]
+   ],
+   "caution": null,
+   "memo": "後継BR1000S-JP。波形種別は仕様書で明記なし",
+   "source": "https://download.se.com/files?p_Doc_Ref=SPD_BR1000G-JP_Spec_JA",
+   "outlets": {
+    "backup": 4,
+    "surgeOnly": 4,
+    "type": null,
+    "note": "内訳は販売店カタログからの推定"
+   }
+  },
+  {
+   "model": "BR1200G-JP",
+   "maker": "apc",
+   "name": "APC RS Pro 1200",
+   "va": 1200,
+   "watt": 720,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "矩形波",
+   "salesStatus": "販売終了",
+   "url": null,
+   "runtime": [
+    [
+     60,
+     122
+    ],
+    [
+     120,
+     56
+    ],
+    [
+     180,
+     35
+    ],
+    [
+     240,
+     24
+    ],
+    [
+     300,
+     21
+    ],
+    [
+     360,
+     14
+    ],
+    [
+     420,
+     11
+    ],
+    [
+     480,
+     9
+    ],
+    [
+     540,
+     7
+    ],
+    [
+     600,
+     6
+    ],
+    [
+     660,
+     5
+    ],
+    [
+     720,
+     4
+    ]
+   ],
+   "caution": null,
+   "memo": "後継BR1200S-JP",
+   "source": "https://download.se.com/files?p_Doc_Ref=SPD_BR1200G-JP_SPEC_Spec_JA",
+   "outlets": {
+    "backup": 5,
+    "surgeOnly": 5,
+    "type": null,
+    "note": "内訳は販売店カタログからの推定"
+   }
+  },
+  {
+   "model": "BR400S-JP",
+   "maker": "apc",
+   "name": "APC RS 400VA Sinewave Battery Backup 100V",
+   "va": 400,
+   "watt": 240,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://www.se.com/jp/ja/product/BR400S-JP/",
+   "runtime": [
+    [
+     10,
+     162
+    ],
+    [
+     40,
+     62
+    ],
+    [
+     80,
+     31
+    ],
+    [
+     140,
+     15
+    ],
+    [
+     180,
+     10
+    ],
+    [
+     210,
+     7
+    ],
+    [
+     240,
+     5.5
+    ]
+   ],
+   "caution": null,
+   "memo": null,
+   "source": "https://download.se.com/files?p_Doc_Ref=SPD_BR400S-JP_Spec_JA",
+   "outlets": {
+    "backup": 3,
+    "surgeOnly": 3,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BR550S-JP",
+   "maker": "apc",
+   "name": "APC RS 550VA Sinewave Battery Backup 100V",
+   "va": 550,
+   "watt": 330,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://www.se.com/jp/ja/product/BR550S-JP/",
+   "runtime": [
+    [
+     10,
+     162
+    ],
+    [
+     40,
+     62
+    ],
+    [
+     80,
+     31
+    ],
+    [
+     140,
+     15
+    ],
+    [
+     180,
+     10
+    ],
+    [
+     210,
+     8
+    ],
+    [
+     240,
+     6
+    ],
+    [
+     270,
+     5
+    ],
+    [
+     300,
+     4
+    ],
+    [
+     330,
+     3
+    ]
+   ],
+   "caution": null,
+   "memo": null,
+   "source": "https://download.se.com/files?p_Doc_Ref=SPD_BR400S-JP_Spec_JA",
+   "outlets": {
+    "backup": 3,
+    "surgeOnly": 3,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BR1000S-JP",
+   "maker": "apc",
+   "name": "APC RS 1000VA Sinewave Battery Backup 100V",
+   "va": 1000,
+   "watt": 600,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://www.se.com/jp/ja/product/BR1000S-JP/",
+   "runtime": [
+    [
+     60,
+     90
+    ],
+    [
+     120,
+     43
+    ],
+    [
+     180,
+     26
+    ],
+    [
+     240,
+     18
+    ],
+    [
+     300,
+     13
+    ],
+    [
+     360,
+     10
+    ],
+    [
+     420,
+     7
+    ],
+    [
+     480,
+     6
+    ],
+    [
+     540,
+     4
+    ],
+    [
+     600,
+     3
+    ]
+   ],
+   "caution": null,
+   "memo": null,
+   "source": "https://download.se.com/files?p_Doc_Ref=SPD_BR1000S-JP_Spec_JA",
+   "outlets": {
+    "backup": 4,
+    "surgeOnly": 4,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BR1200S-JP",
+   "maker": "apc",
+   "name": "APC RS 1200VA Sinewave Battery Backup 100V",
+   "va": 1200,
+   "watt": 720,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://www.se.com/jp/ja/product/BR1200S-JP/",
+   "runtime": [
+    [
+     60,
+     112
+    ],
+    [
+     120,
+     56
+    ],
+    [
+     180,
+     35
+    ],
+    [
+     240,
+     24
+    ],
+    [
+     300,
+     18
+    ],
+    [
+     360,
+     13
+    ],
+    [
+     420,
+     11
+    ],
+    [
+     480,
+     8
+    ],
+    [
+     540,
+     7
+    ],
+    [
+     600,
+     5
+    ],
+    [
+     660,
+     4
+    ],
+    [
+     720,
+     3
+    ]
+   ],
+   "caution": null,
+   "memo": null,
+   "source": "https://download.se.com/files?p_Doc_Ref=SPD_BR1000S-JP_Spec_JA",
+   "outlets": {
+    "backup": 4,
+    "surgeOnly": 4,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BG500-JP",
+   "maker": "apc",
+   "name": "APC GS Pro 500",
+   "va": 500,
+   "watt": 300,
+   "form": "tower",
+   "rackU": null,
+   "topology": "常時商用",
+   "waveform": null,
+   "salesStatus": "販売終了",
+   "url": null,
+   "runtime": [
+    [
+     5,
+     130
+    ],
+    [
+     10,
+     97
+    ],
+    [
+     25,
+     44
+    ],
+    [
+     30,
+     37
+    ],
+    [
+     60,
+     20
+    ],
+    [
+     120,
+     10
+    ],
+    [
+     180,
+     6.5
+    ],
+    [
+     240,
+     4.7
+    ],
+    [
+     300,
+     3.5
+    ]
+   ],
+   "caution": null,
+   "memo": "リチウムイオン。値はBG500-JPEW仕様書より",
+   "source": "https://download.se.com/files?p_Doc_Ref=SPD_BG500-JPEW_Spec__JA",
+   "outlets": {
+    "backup": null,
+    "surgeOnly": null,
+    "type": null,
+    "note": "合計4口（停電時に給電される口の内訳は未確認）"
+   }
+  },
+  {
+   "model": "BE550G-JP",
+   "maker": "apc",
+   "name": "APC ES 550",
+   "va": 550,
+   "watt": 330,
+   "form": "tower",
+   "rackU": null,
+   "topology": "常時商用",
+   "waveform": "矩形波",
+   "salesStatus": "販売終了",
+   "url": null,
+   "runtime": [
+    [
+     30,
+     92
+    ],
+    [
+     60,
+     41
+    ],
+    [
+     90,
+     24
+    ],
+    [
+     120,
+     16
+    ],
+    [
+     150,
+     12
+    ],
+    [
+     180,
+     9
+    ],
+    [
+     210,
+     7
+    ],
+    [
+     240,
+     5
+    ],
+    [
+     270,
+     4
+    ],
+    [
+     300,
+     3
+    ],
+    [
+     330,
+     2
+    ]
+   ],
+   "caution": null,
+   "memo": "後継BE550M1-JP。タップ型",
+   "source": "https://download.se.com/files?p_Doc_Ref=SPD_BE550G-JP_Spec_JA",
+   "outlets": {
+    "backup": 4,
+    "surgeOnly": 4,
+    "type": null,
+    "note": null
+   }
+  },
+  {
+   "model": "BE750G-JP",
+   "maker": "apc",
+   "name": "APC ES 750",
+   "va": 750,
+   "watt": 450,
+   "form": "tower",
+   "rackU": null,
+   "topology": "常時商用",
+   "waveform": "矩形波",
+   "salesStatus": "販売終了",
+   "url": null,
+   "runtime": [
+    [
+     30,
+     108
+    ],
+    [
+     60,
+     50
+    ],
+    [
+     90,
+     30
+    ],
+    [
+     120,
+     22
+    ],
+    [
+     150,
+     16
+    ],
+    [
+     180,
+     11
+    ],
+    [
+     210,
+     9
+    ],
+    [
+     240,
+     7.2
+    ],
+    [
+     270,
+     6.5
+    ],
+    [
+     300,
+     5.7
+    ],
+    [
+     330,
+     4.9
+    ],
+    [
+     360,
+     4.1
+    ],
+    [
+     390,
+     3.3
+    ],
+    [
+     420,
+     2.4
+    ],
+    [
+     450,
+     2
+    ]
+   ],
+   "caution": null,
+   "memo": "後継BE750M2-JP。タップ型",
+   "source": "https://download.se.com/files?p_Doc_Ref=SPD_BE750G-JP_Spec_JA",
+   "outlets": {
+    "backup": 5,
+    "surgeOnly": 5,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BE550M1-JP",
+   "maker": "apc",
+   "name": "APC ES 550（USB 1ポート）",
+   "va": 550,
+   "watt": 330,
+   "form": "tower",
+   "rackU": null,
+   "topology": "常時商用",
+   "waveform": "矩形波",
+   "salesStatus": "現行",
+   "url": "https://www.se.com/jp/ja/product/BE550M1-JP/",
+   "runtime": [
+    [
+     30,
+     121
+    ],
+    [
+     60,
+     57
+    ],
+    [
+     120,
+     23
+    ],
+    [
+     150,
+     16
+    ],
+    [
+     180,
+     12
+    ],
+    [
+     210,
+     9
+    ],
+    [
+     240,
+     6.5
+    ],
+    [
+     270,
+     5
+    ],
+    [
+     300,
+     3.5
+    ],
+    [
+     330,
+     2.6
+    ]
+   ],
+   "caution": null,
+   "memo": "公式対応表では「ES 550 USB」表記。仕様書の90W:24分は外れ値のため除外",
+   "source": "https://download.se.com/files?p_Doc_Ref=SPD_BE550M1-JP_Spec_JA",
+   "outlets": {
+    "backup": 6,
+    "surgeOnly": 3,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BE750M2-JP",
+   "maker": "apc",
+   "name": "APC ES 750（USB 2ポート）",
+   "va": 750,
+   "watt": 450,
+   "form": "tower",
+   "rackU": null,
+   "topology": "常時商用",
+   "waveform": "矩形波",
+   "salesStatus": "現行",
+   "url": "https://www.se.com/jp/ja/product/BE750M2-JP/",
+   "runtime": [
+    [
+     30,
+     122
+    ],
+    [
+     60,
+     58
+    ],
+    [
+     90,
+     36
+    ],
+    [
+     120,
+     25
+    ],
+    [
+     150,
+     19
+    ],
+    [
+     180,
+     15
+    ],
+    [
+     210,
+     12
+    ],
+    [
+     240,
+     9.5
+    ],
+    [
+     270,
+     8
+    ],
+    [
+     300,
+     6.5
+    ],
+    [
+     330,
+     5.5
+    ],
+    [
+     360,
+     5
+    ],
+    [
+     390,
+     4
+    ],
+    [
+     420,
+     3.5
+    ],
+    [
+     450,
+     3
+    ]
+   ],
+   "caution": null,
+   "memo": "公式対応表では「ES 750 USB」表記",
+   "source": "https://download.se.com/files?p_Doc_Ref=SPD_BE550M1-JP_Spec_JA",
+   "outlets": {
+    "backup": 6,
+    "surgeOnly": 3,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BL50T",
+   "maker": "omron",
+   "name": "オムロン BL50T",
+   "va": 500,
+   "watt": 450,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/bl50-100t/bl50-100t.html",
+   "runtime": [
+    [
+     20,
+     80
+    ],
+    [
+     50,
+     45
+    ],
+    [
+     100,
+     26
+    ],
+    [
+     200,
+     14
+    ],
+    [
+     300,
+     10.5
+    ],
+    [
+     400,
+     7
+    ],
+    [
+     450,
+     6
+    ]
+   ],
+   "caution": null,
+   "memo": "リチウムイオン",
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
+   "outlets": {
+    "backup": 6,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BL75T",
+   "maker": "omron",
+   "name": "オムロン BL75T",
+   "va": 750,
+   "watt": 680,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/bl50-100t/bl50-100t.html",
+   "runtime": [
+    [
+     20,
+     120
+    ],
+    [
+     50,
+     68
+    ],
+    [
+     100,
+     40
+    ],
+    [
+     200,
+     21
+    ],
+    [
+     300,
+     15
+    ],
+    [
+     400,
+     10.5
+    ],
+    [
+     500,
+     8
+    ],
+    [
+     600,
+     6.4
+    ],
+    [
+     680,
+     5
+    ]
+   ],
+   "caution": null,
+   "memo": "リチウムイオン",
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
+   "outlets": {
+    "backup": 6,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BL100T",
+   "maker": "omron",
+   "name": "オムロン BL100T",
+   "va": 1000,
+   "watt": 900,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/bl50-100t/bl50-100t.html",
+   "runtime": [
+    [
+     20,
+     160
+    ],
+    [
+     50,
+     90
+    ],
+    [
+     100,
+     54
+    ],
+    [
+     200,
+     30
+    ],
+    [
+     300,
+     20
+    ],
+    [
+     400,
+     15
+    ],
+    [
+     500,
+     12
+    ],
+    [
+     600,
+     10
+    ],
+    [
+     700,
+     7.5
+    ],
+    [
+     800,
+     6
+    ],
+    [
+     900,
+     5
+    ]
+   ],
+   "caution": null,
+   "memo": "リチウムイオン",
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
+   "outlets": {
+    "backup": 8,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": "形状は公式資料間で記載ゆれあり"
+   }
+  },
+  {
+   "model": "BW40T",
+   "maker": "omron",
+   "name": "オムロン BW40T",
+   "va": 400,
+   "watt": 250,
+   "form": "tower",
+   "rackU": null,
+   "topology": "常時商用",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/bw40-120t/bw40-120t.html",
+   "runtime": [
+    [
+     20,
+     105
+    ],
+    [
+     50,
+     50
+    ],
+    [
+     100,
+     22
+    ],
+    [
+     200,
+     8
+    ],
+    [
+     250,
+     5.4
+    ]
+   ],
+   "caution": null,
+   "memo": null,
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
+   "outlets": {
+    "backup": 4,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BW55T",
+   "maker": "omron",
+   "name": "オムロン BW55T",
+   "va": 550,
+   "watt": 340,
+   "form": "tower",
+   "rackU": null,
+   "topology": "常時商用",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/bw40-120t/bw40-120t.html",
+   "runtime": [
+    [
+     20,
+     105
+    ],
+    [
+     50,
+     50
+    ],
+    [
+     100,
+     22
+    ],
+    [
+     200,
+     8
+    ],
+    [
+     300,
+     4.5
+    ],
+    [
+     340,
+     3.6
+    ]
+   ],
+   "caution": null,
+   "memo": null,
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
+   "outlets": {
+    "backup": 4,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BW100T",
+   "maker": "omron",
+   "name": "オムロン BW100T",
+   "va": 1000,
+   "watt": 610,
+   "form": "tower",
+   "rackU": null,
+   "topology": "常時商用",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/bw40-120t/bw40-120t.html",
+   "runtime": [
+    [
+     20,
+     220
+    ],
+    [
+     50,
+     100
+    ],
+    [
+     100,
+     50
+    ],
+    [
+     200,
+     20
+    ],
+    [
+     300,
+     13
+    ],
+    [
+     400,
+     8
+    ],
+    [
+     500,
+     5
+    ],
+    [
+     600,
+     4.5
+    ],
+    [
+     610,
+     4.3
+    ]
+   ],
+   "caution": null,
+   "memo": null,
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
+   "outlets": {
+    "backup": 4,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BW120T",
+   "maker": "omron",
+   "name": "オムロン BW120T",
+   "va": 1200,
+   "watt": 730,
+   "form": "tower",
+   "rackU": null,
+   "topology": "常時商用",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/bw40-120t/bw40-120t.html",
+   "runtime": [
+    [
+     20,
+     220
+    ],
+    [
+     50,
+     100
+    ],
+    [
+     100,
+     50
+    ],
+    [
+     200,
+     20
+    ],
+    [
+     300,
+     13
+    ],
+    [
+     400,
+     8
+    ],
+    [
+     500,
+     5
+    ],
+    [
+     600,
+     4.5
+    ],
+    [
+     700,
+     4.2
+    ],
+    [
+     730,
+     3.6
+    ]
+   ],
+   "caution": null,
+   "memo": null,
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
+   "outlets": {
+    "backup": 4,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BY35S",
+   "maker": "omron",
+   "name": "オムロン BY35S",
+   "va": 350,
+   "watt": 210,
+   "form": "tower",
+   "rackU": null,
+   "topology": "常時商用",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/by35-120s/by35-120s.html",
+   "runtime": [
+    [
+     20,
+     90
+    ],
+    [
+     50,
+     40
+    ],
+    [
+     100,
+     15
+    ],
+    [
+     200,
+     6.5
+    ],
+    [
+     210,
+     6
+    ]
+   ],
+   "caution": null,
+   "memo": null,
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
+   "outlets": {
+    "backup": 4,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BY50S",
+   "maker": "omron",
+   "name": "オムロン BY50S",
+   "va": 500,
+   "watt": 300,
+   "form": "tower",
+   "rackU": null,
+   "topology": "常時商用",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/by35-120s/by35-120s.html",
+   "runtime": [
+    [
+     20,
+     90
+    ],
+    [
+     50,
+     40
+    ],
+    [
+     100,
+     15
+    ],
+    [
+     200,
+     6.5
+    ],
+    [
+     300,
+     3.5
+    ]
+   ],
+   "caution": null,
+   "memo": null,
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
+   "outlets": {
+    "backup": 4,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BY80S",
+   "maker": "omron",
+   "name": "オムロン BY80S",
+   "va": 800,
+   "watt": 500,
+   "form": "tower",
+   "rackU": null,
+   "topology": "常時商用",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/by35-120s/by35-120s.html",
+   "runtime": [
+    [
+     20,
+     170
+    ],
+    [
+     50,
+     100
+    ],
+    [
+     100,
+     40
+    ],
+    [
+     200,
+     15
+    ],
+    [
+     300,
+     9
+    ],
+    [
+     400,
+     6
+    ],
+    [
+     500,
+     4
+    ]
+   ],
+   "caution": null,
+   "memo": null,
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
+   "outlets": {
+    "backup": 4,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BY120S",
+   "maker": "omron",
+   "name": "オムロン BY120S",
+   "va": 1200,
+   "watt": 720,
+   "form": "tower",
+   "rackU": null,
+   "topology": "常時商用",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/by35-120s/by35-120s.html",
+   "runtime": [
+    [
+     20,
+     300
+    ],
+    [
+     50,
+     130
+    ],
+    [
+     100,
+     63
+    ],
+    [
+     200,
+     27
+    ],
+    [
+     300,
+     17.5
+    ],
+    [
+     400,
+     11
+    ],
+    [
+     500,
+     7.5
+    ],
+    [
+     600,
+     5.5
+    ],
+    [
+     700,
+     4.2
+    ],
+    [
+     720,
+     4
+    ]
+   ],
+   "caution": null,
+   "memo": null,
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
+   "outlets": {
+    "backup": 4,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BY50FW",
+   "maker": "omron",
+   "name": "オムロン BY50FW",
+   "va": 500,
+   "watt": 300,
+   "form": "tower-rack",
+   "rackU": 2,
+   "topology": "常時商用",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/by50fw-75sw/by50fw-75sw.html",
+   "runtime": [
+    [
+     20,
+     80
+    ],
+    [
+     50,
+     35
+    ],
+    [
+     100,
+     14
+    ],
+    [
+     200,
+     5.5
+    ],
+    [
+     300,
+     3.5
+    ]
+   ],
+   "caution": null,
+   "memo": "薄型。ラック搭載は別売BYP50R使用時2U",
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
+   "outlets": {
+    "backup": 3,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BY75SW",
+   "maker": "omron",
+   "name": "オムロン BY75SW",
+   "va": 750,
+   "watt": 450,
+   "form": "tower",
+   "rackU": null,
+   "topology": "常時商用",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/by50fw-75sw/by50fw-75sw.html",
+   "runtime": [
+    [
+     20,
+     180
+    ],
+    [
+     50,
+     70
+    ],
+    [
+     100,
+     30
+    ],
+    [
+     200,
+     12
+    ],
+    [
+     300,
+     7
+    ],
+    [
+     400,
+     5.5
+    ],
+    [
+     450,
+     5
+    ]
+   ],
+   "caution": null,
+   "memo": null,
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
+   "outlets": {
+    "backup": 4,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BN50T",
+   "maker": "omron",
+   "name": "オムロン BN50T",
+   "va": 500,
+   "watt": 450,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/bn50-300t/bn50-300t.html",
+   "runtime": [
+    [
+     20,
+     250
+    ],
+    [
+     50,
+     110
+    ],
+    [
+     100,
+     55
+    ],
+    [
+     200,
+     24
+    ],
+    [
+     300,
+     15.5
+    ],
+    [
+     400,
+     10.5
+    ],
+    [
+     450,
+     8.5
+    ]
+   ],
+   "caution": null,
+   "memo": "ファンレス",
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
+   "outlets": {
+    "backup": 6,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BN75T",
+   "maker": "omron",
+   "name": "オムロン BN75T",
+   "va": 750,
+   "watt": 680,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/bn50-300t/bn50-300t.html",
+   "runtime": [
+    [
+     20,
+     250
+    ],
+    [
+     50,
+     110
+    ],
+    [
+     100,
+     55
+    ],
+    [
+     200,
+     24
+    ],
+    [
+     300,
+     15.5
+    ],
+    [
+     400,
+     10.5
+    ],
+    [
+     500,
+     7.6
+    ],
+    [
+     600,
+     5.8
+    ],
+    [
+     680,
+     4
+    ]
+   ],
+   "caution": null,
+   "memo": "ファンレス",
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
+   "outlets": {
+    "backup": 6,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BN100T",
+   "maker": "omron",
+   "name": "オムロン BN100T",
+   "va": 1000,
+   "watt": 900,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/bn50-300t/bn50-300t.html",
+   "runtime": [
+    [
+     20,
+     480
+    ],
+    [
+     50,
+     215
+    ],
+    [
+     100,
+     120
+    ],
+    [
+     200,
+     56
+    ],
+    [
+     300,
+     35
+    ],
+    [
+     400,
+     25
+    ],
+    [
+     500,
+     19
+    ],
+    [
+     600,
+     16
+    ],
+    [
+     700,
+     13
+    ],
+    [
+     800,
+     11
+    ],
+    [
+     900,
+     9
+    ]
+   ],
+   "caution": null,
+   "memo": null,
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
+   "outlets": {
+    "backup": 8,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BN150T",
+   "maker": "omron",
+   "name": "オムロン BN150T",
+   "va": 1125,
+   "watt": 1125,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/bn50-300t/bn50-300t.html",
+   "runtime": [
+    [
+     20,
+     480
+    ],
+    [
+     50,
+     215
+    ],
+    [
+     100,
+     120
+    ],
+    [
+     200,
+     56
+    ],
+    [
+     300,
+     35
+    ],
+    [
+     400,
+     25
+    ],
+    [
+     500,
+     19
+    ],
+    [
+     600,
+     16
+    ],
+    [
+     700,
+     13
+    ],
+    [
+     800,
+     11
+    ],
+    [
+     900,
+     9.3
+    ],
+    [
+     1000,
+     8
+    ],
+    [
+     1100,
+     7
+    ]
+   ],
+   "caution": null,
+   "memo": "工場出荷時1125VA/1125W。20Aプラグ時1500VA/1350W",
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
+   "outlets": {
+    "backup": 8,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BN220T",
+   "maker": "omron",
+   "name": "オムロン BN220T",
+   "va": 2200,
+   "watt": 1980,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/bn50-300t/bn50-300t.html",
+   "runtime": [
+    [
+     20,
+     900
+    ],
+    [
+     50,
+     460
+    ],
+    [
+     100,
+     250
+    ],
+    [
+     200,
+     125
+    ],
+    [
+     300,
+     81.5
+    ],
+    [
+     400,
+     57
+    ],
+    [
+     500,
+     44
+    ],
+    [
+     600,
+     36
+    ],
+    [
+     700,
+     29.6
+    ],
+    [
+     800,
+     25
+    ],
+    [
+     900,
+     21
+    ],
+    [
+     1000,
+     18
+    ],
+    [
+     1100,
+     15.8
+    ],
+    [
+     1200,
+     14
+    ],
+    [
+     1300,
+     12.4
+    ],
+    [
+     1400,
+     11
+    ],
+    [
+     1500,
+     10.2
+    ],
+    [
+     1600,
+     9.5
+    ],
+    [
+     1700,
+     8.7
+    ],
+    [
+     1800,
+     8
+    ],
+    [
+     1900,
+     7.4
+    ],
+    [
+     1980,
+     7
+    ]
+   ],
+   "caution": null,
+   "memo": null,
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
+   "outlets": {
+    "backup": 10,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R×8、5-20R×2",
+    "note": null
+   }
+  },
+  {
+   "model": "BN300T",
+   "maker": "omron",
+   "name": "オムロン BN300T",
+   "va": 2370,
+   "watt": 2370,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/bn50-300t/bn50-300t.html",
+   "runtime": [
+    [
+     20,
+     900
+    ],
+    [
+     50,
+     460
+    ],
+    [
+     100,
+     250
+    ],
+    [
+     200,
+     125
+    ],
+    [
+     300,
+     81.5
+    ],
+    [
+     400,
+     57
+    ],
+    [
+     500,
+     44
+    ],
+    [
+     600,
+     36
+    ],
+    [
+     700,
+     29.6
+    ],
+    [
+     800,
+     25
+    ],
+    [
+     900,
+     21
+    ],
+    [
+     1000,
+     18
+    ],
+    [
+     1100,
+     15.8
+    ],
+    [
+     1200,
+     14
+    ],
+    [
+     1300,
+     12.4
+    ],
+    [
+     1400,
+     11
+    ],
+    [
+     1500,
+     10.2
+    ],
+    [
+     1600,
+     9.5
+    ],
+    [
+     1700,
+     8.7
+    ],
+    [
+     1800,
+     8
+    ],
+    [
+     1900,
+     7.5
+    ],
+    [
+     2000,
+     7
+    ],
+    [
+     2100,
+     6.6
+    ],
+    [
+     2200,
+     6.2
+    ],
+    [
+     2300,
+     5.8
+    ]
+   ],
+   "caution": "30A用の専用コンセントが必要です",
+   "memo": "工場出荷時2370VA/2370W（30Aプラグ）",
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
+   "outlets": {
+    "backup": 10,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R×8、5-20R×2",
+    "note": null
+   }
+  },
+  {
+   "model": "BN75R",
+   "maker": "omron",
+   "name": "オムロン BN75R",
+   "va": 750,
+   "watt": 680,
+   "form": "rack",
+   "rackU": 1,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/bn75r/bn75r.html",
+   "runtime": [
+    [
+     20,
+     250
+    ],
+    [
+     50,
+     100
+    ],
+    [
+     100,
+     55
+    ],
+    [
+     200,
+     24
+    ],
+    [
+     300,
+     15.5
+    ],
+    [
+     400,
+     10.5
+    ],
+    [
+     500,
+     7.6
+    ],
+    [
+     600,
+     5.8
+    ],
+    [
+     680,
+     4
+    ]
+   ],
+   "caution": null,
+   "memo": "1U、縦置き非対応",
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
+   "outlets": {
+    "backup": 4,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BN150R",
+   "maker": "omron",
+   "name": "オムロン BN150R",
+   "va": 1125,
+   "watt": 1125,
+   "form": "tower-rack",
+   "rackU": 2,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "販売終了",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/bn150-300r/bn150-300r.html",
+   "runtime": [
+    [
+     20,
+     480
+    ],
+    [
+     50,
+     215
+    ],
+    [
+     100,
+     120
+    ],
+    [
+     200,
+     56
+    ],
+    [
+     300,
+     35
+    ],
+    [
+     400,
+     25
+    ],
+    [
+     500,
+     19.6
+    ],
+    [
+     600,
+     16
+    ],
+    [
+     700,
+     13
+    ],
+    [
+     800,
+     11
+    ],
+    [
+     900,
+     9.3
+    ],
+    [
+     1000,
+     8
+    ],
+    [
+     1100,
+     7
+    ]
+   ],
+   "caution": null,
+   "memo": "2024年8月生産終了",
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
+   "outlets": {
+    "backup": 6,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BN300R",
+   "maker": "omron",
+   "name": "オムロン BN300R",
+   "va": 2370,
+   "watt": 2370,
+   "form": "tower-rack",
+   "rackU": 2,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "販売終了",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/bn150-300r/bn150-300r.html",
+   "runtime": [
+    [
+     20,
+     600
+    ],
+    [
+     50,
+     300
+    ],
+    [
+     100,
+     170
+    ],
+    [
+     200,
+     90
+    ],
+    [
+     300,
+     55
+    ],
+    [
+     400,
+     40
+    ],
+    [
+     500,
+     31
+    ],
+    [
+     600,
+     26
+    ],
+    [
+     700,
+     21.4
+    ],
+    [
+     800,
+     18
+    ],
+    [
+     900,
+     15.2
+    ],
+    [
+     1000,
+     13
+    ],
+    [
+     1100,
+     11.5
+    ],
+    [
+     1200,
+     10.2
+    ],
+    [
+     1300,
+     9.1
+    ],
+    [
+     1400,
+     8.2
+    ],
+    [
+     1500,
+     7.2
+    ],
+    [
+     1600,
+     6.4
+    ],
+    [
+     1700,
+     5.6
+    ],
+    [
+     1800,
+     5
+    ],
+    [
+     1900,
+     4.7
+    ],
+    [
+     2000,
+     4.5
+    ],
+    [
+     2100,
+     3.8
+    ],
+    [
+     2200,
+     3.2
+    ],
+    [
+     2300,
+     2.7
+    ]
+   ],
+   "caution": "30A用の専用コンセントが必要です",
+   "memo": "2024年9月生産終了",
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
+   "outlets": {
+    "backup": 8,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R×6、5-20R×2",
+    "note": null
+   }
+  },
+  {
+   "model": "BN150RA",
+   "maker": "omron",
+   "name": "オムロン BN150RA",
+   "va": 1240,
+   "watt": 1240,
+   "form": "tower-rack",
+   "rackU": 2,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/bn150-300ra/bn150-300ra.html",
+   "runtime": [
+    [
+     20,
+     480
+    ],
+    [
+     50,
+     215
+    ],
+    [
+     100,
+     133
+    ],
+    [
+     200,
+     62
+    ],
+    [
+     300,
+     39
+    ],
+    [
+     400,
+     27
+    ],
+    [
+     500,
+     20
+    ],
+    [
+     600,
+     17
+    ],
+    [
+     700,
+     14
+    ],
+    [
+     800,
+     11
+    ],
+    [
+     900,
+     9
+    ],
+    [
+     1000,
+     8
+    ],
+    [
+     1100,
+     7
+    ],
+    [
+     1200,
+     6
+    ],
+    [
+     1240,
+     5.5
+    ]
+   ],
+   "caution": null,
+   "memo": "100Vモード値。900〜1200W付近はPDF読み取りに揺れあり（要目視確認）",
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
+   "outlets": {
+    "backup": 8,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BN300RA",
+   "maker": "omron",
+   "name": "オムロン BN300RA",
+   "va": 2500,
+   "watt": 2500,
+   "form": "tower-rack",
+   "rackU": 2,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/bn150-300ra/bn150-300ra.html",
+   "runtime": [
+    [
+     20,
+     600
+    ],
+    [
+     50,
+     300
+    ],
+    [
+     100,
+     170
+    ],
+    [
+     200,
+     95
+    ],
+    [
+     300,
+     61
+    ],
+    [
+     400,
+     44
+    ],
+    [
+     500,
+     34
+    ],
+    [
+     600,
+     27
+    ],
+    [
+     700,
+     23
+    ],
+    [
+     800,
+     19
+    ],
+    [
+     900,
+     17
+    ],
+    [
+     1000,
+     15
+    ],
+    [
+     1100,
+     13
+    ],
+    [
+     1200,
+     11
+    ],
+    [
+     1300,
+     10
+    ],
+    [
+     1400,
+     9
+    ],
+    [
+     1500,
+     8
+    ],
+    [
+     1600,
+     7
+    ],
+    [
+     1700,
+     6.5
+    ],
+    [
+     1800,
+     6
+    ],
+    [
+     1900,
+     5.5
+    ],
+    [
+     2000,
+     5
+    ],
+    [
+     2100,
+     4.8
+    ],
+    [
+     2200,
+     4.6
+    ],
+    [
+     2300,
+     4.4
+    ],
+    [
+     2400,
+     4
+    ],
+    [
+     2500,
+     3.6
+    ]
+   ],
+   "caution": "専用コンセントが必要です",
+   "memo": "100Vモード値",
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
+   "outlets": {
+    "backup": 7,
+    "surgeOnly": 0,
+    "type": "NEMA 5-20R×6、L5-30R×1",
+    "note": null
+   }
+  },
+  {
+   "model": "BV55RE",
+   "maker": "omron",
+   "name": "オムロン BV55RE",
+   "va": 550,
+   "watt": 330,
+   "form": "tower-rack",
+   "rackU": 1,
+   "topology": "常時商用",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/bv-series/",
+   "runtime": [
+    [
+     20,
+     120
+    ],
+    [
+     50,
+     56
+    ],
+    [
+     100,
+     29
+    ],
+    [
+     200,
+     14.5
+    ],
+    [
+     300,
+     9.5
+    ],
+    [
+     330,
+     8.5
+    ]
+   ],
+   "caution": null,
+   "memo": "リチウムイオン、1U薄型。縦置・壁掛・ラックはオプション",
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/download/datasheet/DS-012I_BV_250612-S2.pdf",
+   "outlets": {
+    "backup": 3,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BV55REM",
+   "maker": "omron",
+   "name": "オムロン BV55REM（ネットワーク機能内蔵）",
+   "va": 550,
+   "watt": 330,
+   "form": "tower-rack",
+   "rackU": 1,
+   "topology": "常時商用",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/bv-series/",
+   "runtime": [
+    [
+     20,
+     120
+    ],
+    [
+     50,
+     56
+    ],
+    [
+     100,
+     29
+    ],
+    [
+     200,
+     14.5
+    ],
+    [
+     300,
+     9.5
+    ],
+    [
+     330,
+     8.5
+    ]
+   ],
+   "caution": null,
+   "memo": "BV55REにネットワーク機能を内蔵",
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/download/datasheet/DS-012I_BV_250612-S2.pdf",
+   "outlets": {
+    "backup": 3,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BU75RW",
+   "maker": "omron",
+   "name": "オムロン BU75RW",
+   "va": 750,
+   "watt": 600,
+   "form": "tower-rack",
+   "rackU": 2,
+   "topology": "常時インバータ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/bu75-300rw/bu75-300rw.html",
+   "runtime": [
+    [
+     20,
+     250
+    ],
+    [
+     50,
+     150
+    ],
+    [
+     100,
+     85
+    ],
+    [
+     200,
+     36
+    ],
+    [
+     300,
+     23
+    ],
+    [
+     400,
+     18
+    ],
+    [
+     500,
+     13
+    ],
+    [
+     600,
+     10
+    ]
+   ],
+   "caution": null,
+   "memo": null,
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
+   "outlets": {
+    "backup": 6,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BU100RW",
+   "maker": "omron",
+   "name": "オムロン BU100RW",
+   "va": 1000,
+   "watt": 800,
+   "form": "tower-rack",
+   "rackU": 2,
+   "topology": "常時インバータ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/bu75-300rw/bu75-300rw.html",
+   "runtime": [
+    [
+     20,
+     250
+    ],
+    [
+     50,
+     150
+    ],
+    [
+     100,
+     85
+    ],
+    [
+     200,
+     36
+    ],
+    [
+     300,
+     23
+    ],
+    [
+     400,
+     18
+    ],
+    [
+     500,
+     13
+    ],
+    [
+     600,
+     10
+    ],
+    [
+     700,
+     8.3
+    ],
+    [
+     800,
+     7
+    ]
+   ],
+   "caution": null,
+   "memo": null,
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
+   "outlets": {
+    "backup": 6,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BU200RW",
+   "maker": "omron",
+   "name": "オムロン BU200RW",
+   "va": 1100,
+   "watt": 880,
+   "form": "tower-rack",
+   "rackU": 2,
+   "topology": "常時インバータ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/bu75-300rw/bu75-300rw.html",
+   "runtime": [
+    [
+     20,
+     320
+    ],
+    [
+     50,
+     220
+    ],
+    [
+     100,
+     150
+    ],
+    [
+     200,
+     80
+    ],
+    [
+     300,
+     52
+    ],
+    [
+     400,
+     40
+    ],
+    [
+     500,
+     31
+    ],
+    [
+     600,
+     26
+    ],
+    [
+     700,
+     21
+    ],
+    [
+     800,
+     18
+    ]
+   ],
+   "caution": null,
+   "memo": "工場出荷時1100VA/880W。プラグ交換時2000VA/1600W",
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
+   "outlets": {
+    "backup": 6,
+    "surgeOnly": 0,
+    "type": "NEMA 5-20R（15Aプラグも可）",
+    "note": null
+   }
+  },
+  {
+   "model": "BU300RW",
+   "maker": "omron",
+   "name": "オムロン BU300RW",
+   "va": 2400,
+   "watt": 1920,
+   "form": "tower-rack",
+   "rackU": 3,
+   "topology": "常時インバータ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/bu75-300rw/bu75-300rw.html",
+   "runtime": [
+    [
+     20,
+     320
+    ],
+    [
+     50,
+     220
+    ],
+    [
+     100,
+     150
+    ],
+    [
+     200,
+     80
+    ],
+    [
+     300,
+     52
+    ],
+    [
+     400,
+     40
+    ],
+    [
+     500,
+     31
+    ],
+    [
+     600,
+     26
+    ],
+    [
+     700,
+     21
+    ],
+    [
+     800,
+     18
+    ],
+    [
+     900,
+     16
+    ],
+    [
+     1000,
+     14
+    ],
+    [
+     1100,
+     12
+    ],
+    [
+     1200,
+     11
+    ],
+    [
+     1300,
+     10
+    ],
+    [
+     1400,
+     9
+    ],
+    [
+     1500,
+     8
+    ],
+    [
+     1600,
+     7
+    ],
+    [
+     1700,
+     6.5
+    ],
+    [
+     1800,
+     6
+    ],
+    [
+     1900,
+     5.6
+    ]
+   ],
+   "caution": "専用コンセントが必要です",
+   "memo": "工場出荷時2400VA/1920W",
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
+   "outlets": {
+    "backup": 6,
+    "surgeOnly": 0,
+    "type": "NEMA 5-20R（15Aプラグも可）",
+    "note": "形状は要確認"
+   }
+  },
+  {
+   "model": "BX35F",
+   "maker": "omron",
+   "name": "オムロン BX35F",
+   "va": 350,
+   "watt": 210,
+   "form": "tower-rack",
+   "rackU": 2,
+   "topology": "常時商用",
+   "waveform": "矩形波",
+   "salesStatus": "販売終了",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/bx35-50f/bx35-50f.html",
+   "runtime": [
+    [
+     20,
+     120
+    ],
+    [
+     50,
+     48
+    ],
+    [
+     100,
+     20
+    ],
+    [
+     200,
+     6
+    ],
+    [
+     210,
+     5
+    ]
+   ],
+   "caution": null,
+   "memo": "2025年3月生産終了",
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
+   "outlets": {
+    "backup": 3,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BX50F",
+   "maker": "omron",
+   "name": "オムロン BX50F",
+   "va": 500,
+   "watt": 300,
+   "form": "tower-rack",
+   "rackU": 2,
+   "topology": "常時商用",
+   "waveform": "矩形波",
+   "salesStatus": "販売終了",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/bx35-50f/bx35-50f.html",
+   "runtime": [
+    [
+     20,
+     120
+    ],
+    [
+     50,
+     48
+    ],
+    [
+     100,
+     20
+    ],
+    [
+     200,
+     6
+    ],
+    [
+     300,
+     3.5
+    ]
+   ],
+   "caution": null,
+   "memo": "2025年3月生産終了",
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
+   "outlets": {
+    "backup": 3,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BZ35LT2",
+   "maker": "omron",
+   "name": "オムロン BZ35LT2",
+   "va": 350,
+   "watt": 210,
+   "form": "tower",
+   "rackU": null,
+   "topology": "常時商用",
+   "waveform": "矩形波",
+   "salesStatus": "現行",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/bz35-50lt2/bz35-50lt2.html",
+   "runtime": [
+    [
+     20,
+     90
+    ],
+    [
+     50,
+     42
+    ],
+    [
+     100,
+     19
+    ],
+    [
+     200,
+     6
+    ],
+    [
+     210,
+     5
+    ]
+   ],
+   "caution": null,
+   "memo": "テーブルタップ型",
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
+   "outlets": {
+    "backup": 3,
+    "surgeOnly": 3,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "BZ50LT2",
+   "maker": "omron",
+   "name": "オムロン BZ50LT2",
+   "va": 500,
+   "watt": 300,
+   "form": "tower",
+   "rackU": null,
+   "topology": "常時商用",
+   "waveform": "矩形波",
+   "salesStatus": "現行",
+   "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/bz35-50lt2/bz35-50lt2.html",
+   "runtime": [
+    [
+     20,
+     90
+    ],
+    [
+     50,
+     42
+    ],
+    [
+     100,
+     19
+    ],
+    [
+     200,
+     6
+    ],
+    [
+     300,
+     3
+    ]
+   ],
+   "caution": null,
+   "memo": "テーブルタップ型",
+   "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
+   "outlets": {
+    "backup": 3,
+    "surgeOnly": 3,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "MSP501TX1AS1C-JPN",
+   "maker": "fuji",
+   "name": "富士電機 TX100シリーズ 500VA",
+   "va": 500,
+   "watt": 360,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://www.fujielectric.co.jp/products/power_supply/ups/product_detail/mini_tx100.html",
+   "runtime": [
+    [
+     100,
+     28
+    ],
+    [
+     135,
+     16
+    ],
+    [
+     175,
+     12
+    ],
+    [
+     260,
+     7
+    ],
+    [
+     350,
+     4
+    ]
+   ],
+   "caution": null,
+   "memo": "波形は販売店表記。販売状況は公式に明記なし",
+   "source": "https://www.fujielectric.co.jp/products/power_supply/ups/product_detail/mini_tx100.html",
+   "outlets": {
+    "backup": 8,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "MSP751TX1AS1C-JPN",
+   "maker": "fuji",
+   "name": "富士電機 TX100シリーズ 750VA",
+   "va": 750,
+   "watt": 500,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://www.fujielectric.co.jp/products/power_supply/ups/product_detail/mini_tx100.html",
+   "runtime": [
+    [
+     100,
+     65
+    ],
+    [
+     135,
+     40
+    ],
+    [
+     260,
+     15
+    ],
+    [
+     350,
+     8
+    ],
+    [
+     500,
+     5
+    ]
+   ],
+   "caution": null,
+   "memo": "175W:16分は外れ値のため除外。販売状況は公式に明記なし",
+   "source": "https://www.fujielectric.co.jp/products/power_supply/ups/product_detail/mini_tx100.html",
+   "outlets": {
+    "backup": 8,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "MSP102TX1AS1C-JPN",
+   "maker": "fuji",
+   "name": "富士電機 TX100シリーズ 1000VA",
+   "va": 1000,
+   "watt": 800,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://www.fujielectric.co.jp/products/power_supply/ups/product_detail/mini_tx100.html",
+   "runtime": [
+    [
+     100,
+     120
+    ],
+    [
+     135,
+     80
+    ],
+    [
+     175,
+     70
+    ],
+    [
+     260,
+     40
+    ],
+    [
+     350,
+     30
+    ],
+    [
+     390,
+     22
+    ],
+    [
+     525,
+     8
+    ],
+    [
+     700,
+     6
+    ],
+    [
+     800,
+     5
+    ]
+   ],
+   "caution": null,
+   "memo": "販売状況は公式に明記なし",
+   "source": "https://www.fujielectric.co.jp/products/power_supply/ups/product_detail/mini_tx100.html",
+   "outlets": {
+    "backup": 8,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "PET501J1CA",
+   "maker": "fuji",
+   "name": "富士電機 UX100シリーズ 500VA",
+   "va": 500,
+   "watt": 350,
+   "form": "tower",
+   "rackU": null,
+   "topology": "常時商用",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://www.fujielectric.co.jp/products/power_supply/ups/product_detail/mini_ux100.html",
+   "runtime": [
+    [
+     100,
+     22
+    ],
+    [
+     135,
+     15
+    ],
+    [
+     175,
+     11
+    ],
+    [
+     260,
+     6
+    ],
+    [
+     350,
+     3.5
+    ]
+   ],
+   "caution": null,
+   "memo": null,
+   "source": "https://www.fujielectric.co.jp/products/power_supply/ups/select/pdf/buckup_time.pdf",
+   "outlets": {
+    "backup": 4,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "PET751J1CA",
+   "maker": "fuji",
+   "name": "富士電機 UX100シリーズ 750VA",
+   "va": 750,
+   "watt": 525,
+   "form": "tower",
+   "rackU": null,
+   "topology": "常時商用",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://www.fujielectric.co.jp/products/power_supply/ups/product_detail/mini_ux100.html",
+   "runtime": [
+    [
+     100,
+     48
+    ],
+    [
+     135,
+     34
+    ],
+    [
+     175,
+     27
+    ],
+    [
+     260,
+     16
+    ],
+    [
+     350,
+     11
+    ],
+    [
+     390,
+     9
+    ],
+    [
+     525,
+     5
+    ]
+   ],
+   "caution": null,
+   "memo": null,
+   "source": "https://www.fujielectric.co.jp/products/power_supply/ups/select/pdf/buckup_time.pdf",
+   "outlets": {
+    "backup": 4,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "PET102J1CA",
+   "maker": "fuji",
+   "name": "富士電機 UX100シリーズ 1000VA",
+   "va": 1000,
+   "watt": 700,
+   "form": "tower",
+   "rackU": null,
+   "topology": "常時商用",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://www.fujielectric.co.jp/products/power_supply/ups/product_detail/mini_ux100.html",
+   "runtime": [
+    [
+     100,
+     53
+    ],
+    [
+     135,
+     38
+    ],
+    [
+     175,
+     28
+    ],
+    [
+     260,
+     16
+    ],
+    [
+     350,
+     11
+    ],
+    [
+     390,
+     9
+    ],
+    [
+     525,
+     6
+    ],
+    [
+     700,
+     3.5
+    ]
+   ],
+   "caution": null,
+   "memo": null,
+   "source": "https://www.fujielectric.co.jp/products/power_supply/ups/select/pdf/buckup_time.pdf",
+   "outlets": {
+    "backup": 6,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "PEN102J1C",
+   "maker": "fuji",
+   "name": "富士電機 EX100シリーズ 1000VA（タワー）",
+   "va": 1000,
+   "watt": 800,
+   "form": "tower",
+   "rackU": null,
+   "topology": "常時インバータ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://www.fujielectric.co.jp/products/power_supply/ups/product_detail/mini_ex100.html",
+   "runtime": [
+    [
+     100,
+     66
+    ],
+    [
+     200,
+     33
+    ],
+    [
+     300,
+     23
+    ],
+    [
+     400,
+     18
+    ],
+    [
+     600,
+     8
+    ],
+    [
+     800,
+     5
+    ]
+   ],
+   "caution": null,
+   "memo": null,
+   "source": "https://www.fujielectric.co.jp/products/power_supply/ups/select/pdf/buckup_time.pdf",
+   "outlets": {
+    "backup": 4,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "PEN102J1RT",
+   "maker": "fuji",
+   "name": "富士電機 EX100シリーズ 1000VA（ラック/タワー兼用）",
+   "va": 1000,
+   "watt": 800,
+   "form": "tower-rack",
+   "rackU": 2,
+   "topology": "常時インバータ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://www.fujielectric.co.jp/products/power_supply/ups/product_detail/mini_ex100.html",
+   "runtime": [
+    [
+     100,
+     66
+    ],
+    [
+     200,
+     33
+    ],
+    [
+     300,
+     23
+    ],
+    [
+     400,
+     18
+    ],
+    [
+     600,
+     8
+    ],
+    [
+     800,
+     5
+    ]
+   ],
+   "caution": null,
+   "memo": "ラック取付はレールキット別途",
+   "source": "https://www.fujielectric.co.jp/products/power_supply/ups/select/pdf/buckup_time.pdf",
+   "outlets": {
+    "backup": 4,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "PEN152J1RT/15",
+   "maker": "fuji",
+   "name": "富士電機 EX100シリーズ 1100VA",
+   "va": 1100,
+   "watt": 1000,
+   "form": "tower-rack",
+   "rackU": 2,
+   "topology": "常時インバータ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://www.fujielectric.co.jp/products/power_supply/ups/product_detail/mini_ex100.html",
+   "runtime": [
+    [
+     100,
+     90
+    ],
+    [
+     200,
+     50
+    ],
+    [
+     300,
+     31
+    ],
+    [
+     400,
+     22
+    ],
+    [
+     600,
+     15
+    ],
+    [
+     800,
+     9
+    ],
+    [
+     900,
+     7
+    ],
+    [
+     1000,
+     5
+    ]
+   ],
+   "caution": null,
+   "memo": "一般コンセント(5-15P)向けモデル",
+   "source": "https://www.fujielectric.co.jp/products/power_supply/ups/select/pdf/buckup_time.pdf",
+   "outlets": {
+    "backup": 6,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "PEN152J1RT",
+   "maker": "fuji",
+   "name": "富士電機 EX100シリーズ 1500VA",
+   "va": 1500,
+   "watt": 1200,
+   "form": "tower-rack",
+   "rackU": 2,
+   "topology": "常時インバータ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://www.fujielectric.co.jp/products/power_supply/ups/product_detail/mini_ex100.html",
+   "runtime": [
+    [
+     100,
+     90
+    ],
+    [
+     200,
+     50
+    ],
+    [
+     300,
+     31
+    ],
+    [
+     400,
+     22
+    ],
+    [
+     600,
+     15
+    ],
+    [
+     800,
+     9
+    ],
+    [
+     900,
+     7
+    ],
+    [
+     1000,
+     6
+    ],
+    [
+     1200,
+     5
+    ]
+   ],
+   "caution": "20A用の専用コンセントが必要です",
+   "memo": "入力プラグL5-20P",
+   "source": "https://www.fujielectric.co.jp/products/power_supply/ups/select/pdf/buckup_time.pdf",
+   "outlets": {
+    "backup": 6,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "PEN302J1RT/30",
+   "maker": "fuji",
+   "name": "富士電機 EX100シリーズ 2400VA",
+   "va": 2400,
+   "watt": 2200,
+   "form": "tower-rack",
+   "rackU": 2,
+   "topology": "常時インバータ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://www.fujielectric.co.jp/products/power_supply/ups/product_detail/mini_ex100.html",
+   "runtime": [
+    [
+     100,
+     105
+    ],
+    [
+     200,
+     65
+    ],
+    [
+     300,
+     47
+    ],
+    [
+     400,
+     35
+    ],
+    [
+     600,
+     23
+    ],
+    [
+     800,
+     17
+    ],
+    [
+     900,
+     12
+    ],
+    [
+     1000,
+     11
+    ],
+    [
+     1200,
+     10
+    ],
+    [
+     1800,
+     5
+    ],
+    [
+     2000,
+     4.5
+    ],
+    [
+     2200,
+     4.3
+    ]
+   ],
+   "caution": "30A用の専用コンセントが必要です",
+   "memo": "入力プラグL5-30P",
+   "source": "https://www.fujielectric.co.jp/products/power_supply/ups/select/pdf/buckup_time.pdf",
+   "outlets": {
+    "backup": 5,
+    "surgeOnly": 0,
+    "type": "5-15R×2、5-20R×2、L5-30R×1",
+    "note": null
+   }
+  },
+  {
+   "model": "PEN302J1RT",
+   "maker": "fuji",
+   "name": "富士電機 EX100シリーズ 3000VA",
+   "va": 3000,
+   "watt": 2400,
+   "form": "tower-rack",
+   "rackU": 2,
+   "topology": "常時インバータ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://www.fujielectric.co.jp/products/power_supply/ups/product_detail/mini_ex100.html",
+   "runtime": [
+    [
+     100,
+     105
+    ],
+    [
+     200,
+     65
+    ],
+    [
+     300,
+     47
+    ],
+    [
+     400,
+     35
+    ],
+    [
+     600,
+     23
+    ],
+    [
+     800,
+     17
+    ],
+    [
+     900,
+     12
+    ],
+    [
+     1000,
+     11
+    ],
+    [
+     1200,
+     10
+    ],
+    [
+     1800,
+     5
+    ],
+    [
+     2000,
+     4.5
+    ],
+    [
+     2200,
+     4.3
+    ],
+    [
+     2400,
+     4
+    ]
+   ],
+   "caution": "設置に電気工事（端子台接続）が必要です",
+   "memo": "入力は端子台(M5)",
+   "source": "https://www.fujielectric.co.jp/products/power_supply/ups/select/pdf/buckup_time.pdf",
+   "outlets": {
+    "backup": 2,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R＋出力端子台",
+    "note": "主な出力は端子台（電気工事）"
+   }
+  },
+  {
+   "model": "DL5115-500JL",
+   "maker": "fuji",
+   "name": "富士電機 DL5115シリーズ 500VA",
+   "va": 500,
+   "watt": 320,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "販売終了",
+   "url": "https://www.fujielectric.co.jp/products/power_supply/ups/product_detail/mini_dl5115.html",
+   "runtime": [
+    [
+     50,
+     55
+    ],
+    [
+     100,
+     29
+    ],
+    [
+     150,
+     14
+    ],
+    [
+     200,
+     11
+    ],
+    [
+     250,
+     8
+    ],
+    [
+     300,
+     6
+    ],
+    [
+     320,
+     5
+    ]
+   ],
+   "caution": null,
+   "memo": "生産終了",
+   "source": "https://www.fujielectric.co.jp/products/power_supply/ups/select/pdf/buckup_time.pdf",
+   "outlets": {
+    "backup": 4,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "DL5115-750JL",
+   "maker": "fuji",
+   "name": "富士電機 DL5115シリーズ 750VA",
+   "va": 750,
+   "watt": 500,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "販売終了",
+   "url": "https://www.fujielectric.co.jp/products/power_supply/ups/product_detail/mini_dl5115.html",
+   "runtime": [
+    [
+     50,
+     105
+    ],
+    [
+     100,
+     55
+    ],
+    [
+     150,
+     32
+    ],
+    [
+     200,
+     24
+    ],
+    [
+     250,
+     16
+    ],
+    [
+     300,
+     13
+    ],
+    [
+     350,
+     9
+    ],
+    [
+     400,
+     8
+    ],
+    [
+     500,
+     5
+    ]
+   ],
+   "caution": null,
+   "memo": "生産終了",
+   "source": "https://www.fujielectric.co.jp/products/power_supply/ups/select/pdf/buckup_time.pdf",
+   "outlets": {
+    "backup": 4,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "DL5115-1000JL",
+   "maker": "fuji",
+   "name": "富士電機 DL5115シリーズ 1000VA",
+   "va": 1000,
+   "watt": 670,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "販売終了",
+   "url": "https://www.fujielectric.co.jp/products/power_supply/ups/product_detail/mini_dl5115.html",
+   "runtime": [
+    [
+     50,
+     115
+    ],
+    [
+     100,
+     60
+    ],
+    [
+     150,
+     37
+    ],
+    [
+     200,
+     27
+    ],
+    [
+     250,
+     20
+    ],
+    [
+     300,
+     15
+    ],
+    [
+     350,
+     11
+    ],
+    [
+     400,
+     10
+    ],
+    [
+     500,
+     7
+    ],
+    [
+     600,
+     6
+    ],
+    [
+     670,
+     5
+    ]
+   ],
+   "caution": null,
+   "memo": "生産終了",
+   "source": "https://www.fujielectric.co.jp/products/power_supply/ups/select/pdf/buckup_time.pdf",
+   "outlets": {
+    "backup": 6,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "DL5115-1400JL",
+   "maker": "fuji",
+   "name": "富士電機 DL5115シリーズ 1200VA",
+   "va": 1200,
+   "watt": 950,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "販売終了",
+   "url": "https://www.fujielectric.co.jp/products/power_supply/ups/product_detail/mini_dl5115.html",
+   "runtime": [
+    [
+     50,
+     150
+    ],
+    [
+     100,
+     80
+    ],
+    [
+     150,
+     50
+    ],
+    [
+     200,
+     40
+    ],
+    [
+     250,
+     34
+    ],
+    [
+     300,
+     30
+    ],
+    [
+     350,
+     24
+    ],
+    [
+     400,
+     19
+    ],
+    [
+     500,
+     14
+    ],
+    [
+     600,
+     10
+    ],
+    [
+     800,
+     6
+    ],
+    [
+     950,
+     5
+    ]
+   ],
+   "caution": null,
+   "memo": "形式名1400だが定格1.2kVA。生産終了",
+   "source": "https://www.fujielectric.co.jp/products/power_supply/ups/select/pdf/buckup_time.pdf",
+   "outlets": {
+    "backup": 6,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "DL5115-1400JL-20",
+   "maker": "fuji",
+   "name": "富士電機 DL5115シリーズ 1400VA（5-20P）",
+   "va": 1400,
+   "watt": 950,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "販売終了",
+   "url": "https://www.fujielectric.co.jp/products/power_supply/ups/product_detail/mini_dl5115.html",
+   "runtime": [
+    [
+     50,
+     150
+    ],
+    [
+     100,
+     80
+    ],
+    [
+     150,
+     50
+    ],
+    [
+     200,
+     40
+    ],
+    [
+     250,
+     34
+    ],
+    [
+     300,
+     30
+    ],
+    [
+     350,
+     24
+    ],
+    [
+     400,
+     19
+    ],
+    [
+     500,
+     14
+    ],
+    [
+     600,
+     10
+    ],
+    [
+     800,
+     6
+    ],
+    [
+     950,
+     5
+    ]
+   ],
+   "caution": "20A用の専用コンセントが必要です",
+   "memo": "生産終了",
+   "source": "https://www.fujielectric.co.jp/products/power_supply/ups/select/pdf/buckup_time.pdf",
+   "outlets": {
+    "backup": 6,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "DL3115-300JL",
+   "maker": "fuji",
+   "name": "富士電機 DL3115シリーズ 300VA",
+   "va": 300,
+   "watt": 180,
+   "form": "tower",
+   "rackU": null,
+   "topology": "常時商用",
+   "waveform": "矩形波",
+   "salesStatus": "販売終了",
+   "url": "https://www.fujielectric.co.jp/products/power_supply/ups/product_detail/mini_dl3115.html",
+   "runtime": [
+    [
+     50,
+     30
+    ],
+    [
+     100,
+     16
+    ],
+    [
+     150,
+     11
+    ],
+    [
+     180,
+     9
+    ]
+   ],
+   "caution": null,
+   "memo": "生産終了",
+   "source": "https://www.fujielectric.co.jp/products/power_supply/ups/select/pdf/buckup_time.pdf",
+   "outlets": {
+    "backup": 2,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "DL3115-420JL",
+   "maker": "fuji",
+   "name": "富士電機 DL3115シリーズ 420VA",
+   "va": 420,
+   "watt": 252,
+   "form": "tower",
+   "rackU": null,
+   "topology": "常時商用",
+   "waveform": "矩形波",
+   "salesStatus": "販売終了",
+   "url": "https://www.fujielectric.co.jp/products/power_supply/ups/product_detail/mini_dl3115.html",
+   "runtime": [
+    [
+     50,
+     30
+    ],
+    [
+     100,
+     18
+    ],
+    [
+     150,
+     12
+    ],
+    [
+     200,
+     7
+    ],
+    [
+     250,
+     5
+    ]
+   ],
+   "caution": null,
+   "memo": "生産終了",
+   "source": "https://www.fujielectric.co.jp/products/power_supply/ups/select/pdf/buckup_time.pdf",
+   "outlets": {
+    "backup": 2,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "DL3115-500JL",
+   "maker": "fuji",
+   "name": "富士電機 DL3115シリーズ 500VA",
+   "va": 500,
+   "watt": 300,
+   "form": "tower",
+   "rackU": null,
+   "topology": "常時商用",
+   "waveform": "矩形波",
+   "salesStatus": "販売終了",
+   "url": "https://www.fujielectric.co.jp/products/power_supply/ups/product_detail/mini_dl3115.html",
+   "runtime": [
+    [
+     50,
+     30
+    ],
+    [
+     100,
+     19
+    ],
+    [
+     150,
+     13
+    ],
+    [
+     200,
+     8
+    ],
+    [
+     250,
+     6
+    ],
+    [
+     300,
+     3.5
+    ]
+   ],
+   "caution": null,
+   "memo": "生産終了",
+   "source": "https://www.fujielectric.co.jp/products/power_supply/ups/select/pdf/buckup_time.pdf",
+   "outlets": {
+    "backup": 2,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "DL3115-650JL",
+   "maker": "fuji",
+   "name": "富士電機 DL3115シリーズ 650VA",
+   "va": 650,
+   "watt": 400,
+   "form": "tower",
+   "rackU": null,
+   "topology": "常時商用",
+   "waveform": "矩形波",
+   "salesStatus": "販売終了",
+   "url": "https://www.fujielectric.co.jp/products/power_supply/ups/product_detail/mini_dl3115.html",
+   "runtime": [
+    [
+     50,
+     30
+    ],
+    [
+     100,
+     25
+    ],
+    [
+     150,
+     18
+    ],
+    [
+     200,
+     14
+    ],
+    [
+     250,
+     10
+    ],
+    [
+     300,
+     8
+    ],
+    [
+     350,
+     6
+    ],
+    [
+     400,
+     5
+    ]
+   ],
+   "caution": null,
+   "memo": "生産終了",
+   "source": "https://www.fujielectric.co.jp/products/power_supply/ups/select/pdf/buckup_time.pdf",
+   "outlets": {
+    "backup": 4,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "5P750",
+   "maker": "eaton",
+   "name": "Eaton 5P750",
+   "va": 625,
+   "watt": 500,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://www.daitron.co.jp/eaton/products/eaton-5p-ups.html",
+   "runtime": [
+    [
+     100,
+     40
+    ],
+    [
+     200,
+     19
+    ],
+    [
+     300,
+     12
+    ],
+    [
+     400,
+     8
+    ],
+    [
+     500,
+     7
+    ]
+   ],
+   "caution": null,
+   "memo": "国内定格625VA/500W。販売状況は国内代理店ページより",
+   "source": "https://www.daitron.co.jp/eaton/products/eaton-5p-ups.html",
+   "outlets": {
+    "backup": 8,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "5P750R",
+   "maker": "eaton",
+   "name": "Eaton 5P750R",
+   "va": 625,
+   "watt": 500,
+   "form": "rack",
+   "rackU": 1,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://www.daitron.co.jp/eaton/products/eaton-5p-ups.html",
+   "runtime": [
+    [
+     100,
+     40
+    ],
+    [
+     200,
+     19
+    ],
+    [
+     300,
+     12
+    ],
+    [
+     400,
+     8
+    ],
+    [
+     500,
+     7
+    ]
+   ],
+   "caution": null,
+   "memo": null,
+   "source": "https://www.daitron.co.jp/eaton/products/eaton-5p-ups.html",
+   "outlets": {
+    "backup": 5,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "5P1000",
+   "maker": "eaton",
+   "name": "Eaton 5P1000",
+   "va": 833,
+   "watt": 641,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://www.daitron.co.jp/eaton/products/eaton-5p-ups.html",
+   "runtime": [
+    [
+     100,
+     51
+    ],
+    [
+     200,
+     25
+    ],
+    [
+     300,
+     16
+    ],
+    [
+     400,
+     11
+    ],
+    [
+     500,
+     8
+    ],
+    [
+     641,
+     7
+    ]
+   ],
+   "caution": null,
+   "memo": null,
+   "source": "https://www.daitron.co.jp/eaton/products/eaton-5p-ups.html",
+   "outlets": {
+    "backup": 8,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "5P1000R",
+   "maker": "eaton",
+   "name": "Eaton 5P1000R",
+   "va": 833,
+   "watt": 641,
+   "form": "rack",
+   "rackU": 1,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "販売終了",
+   "url": "https://www.daitron.co.jp/eaton/products/eaton-5p-ups.html",
+   "runtime": [
+    [
+     100,
+     51
+    ],
+    [
+     200,
+     25
+    ],
+    [
+     300,
+     16
+    ],
+    [
+     400,
+     11
+    ],
+    [
+     500,
+     8
+    ],
+    [
+     641,
+     7
+    ]
+   ],
+   "caution": null,
+   "memo": null,
+   "source": "https://www.daitron.co.jp/eaton/products/eaton-5p-ups.html",
+   "outlets": {
+    "backup": 5,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "5P1500",
+   "maker": "eaton",
+   "name": "Eaton 5P1500",
+   "va": 1080,
+   "watt": 825,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://www.daitron.co.jp/eaton/products/eaton-5p-ups.html",
+   "runtime": [
+    [
+     100,
+     84
+    ],
+    [
+     200,
+     49
+    ],
+    [
+     300,
+     28
+    ],
+    [
+     400,
+     20
+    ],
+    [
+     500,
+     15
+    ],
+    [
+     750,
+     9
+    ],
+    [
+     825,
+     7
+    ]
+   ],
+   "caution": null,
+   "memo": null,
+   "source": "https://www.daitron.co.jp/eaton/products/eaton-5p-ups.html",
+   "outlets": {
+    "backup": 8,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "5P1550G",
+   "maker": "eaton",
+   "name": "Eaton 5P1550G",
+   "va": 1395,
+   "watt": 990,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "現行",
+   "url": "https://www.daitron.co.jp/eaton/products/eaton-5p-ups.html",
+   "runtime": [
+    [
+     100,
+     84
+    ],
+    [
+     200,
+     50
+    ],
+    [
+     300,
+     29
+    ],
+    [
+     400,
+     20
+    ],
+    [
+     500,
+     15
+    ],
+    [
+     750,
+     9
+    ],
+    [
+     990,
+     5
+    ]
+   ],
+   "caution": "200V電源が必要です（一般的な100Vコンセントでは使えません）",
+   "memo": "値は200V時",
+   "source": "https://www.daitron.co.jp/eaton/products/eaton-5p-ups.html",
+   "outlets": {
+    "backup": 8,
+    "surgeOnly": 0,
+    "type": "IEC C13（200V系）",
+    "note": null
+   }
+  },
+  {
+   "model": "5P650i",
+   "maker": "eaton",
+   "name": "Eaton 5P650i",
+   "va": 585,
+   "watt": 378,
+   "form": "tower",
+   "rackU": null,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "販売終了",
+   "url": "https://www.daitron.co.jp/eaton/products/eaton-5p-ups.html",
+   "runtime": [
+    [
+     100,
+     19
+    ],
+    [
+     200,
+     10
+    ],
+    [
+     300,
+     5
+    ],
+    [
+     378,
+     3
+    ]
+   ],
+   "caution": "200V電源が必要です（一般的な100Vコンセントでは使えません）",
+   "memo": "200V時585VA/378W",
+   "source": "https://www.daitron.co.jp/eaton/products/eaton-5p-ups.html",
+   "outlets": {
+    "backup": 4,
+    "surgeOnly": 0,
+    "type": "IEC C13（200V系）",
+    "note": null
+   }
+  },
+  {
+   "model": "5PX1000RT2U",
+   "maker": "eaton",
+   "name": "Eaton 5PX1000RT2U",
+   "va": 1000,
+   "watt": 1000,
+   "form": "tower-rack",
+   "rackU": 2,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "販売終了",
+   "url": "https://www.daitron.co.jp/eaton/products/eaton-5px-ups.html",
+   "runtime": [
+    [
+     1000,
+     7
+    ]
+   ],
+   "caution": null,
+   "memo": "運転時間は定格時「7分以上」のみ公表",
+   "source": "https://www.daitron.co.jp/eaton/products/eaton-5px-ups.html",
+   "outlets": {
+    "backup": 8,
+    "surgeOnly": 0,
+    "type": null,
+    "note": "口数は販売店の値"
+   }
+  },
+  {
+   "model": "5PX1500RT2U",
+   "maker": "eaton",
+   "name": "Eaton 5PX1500RT2U",
+   "va": 1200,
+   "watt": 1200,
+   "form": "tower-rack",
+   "rackU": 2,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "販売終了",
+   "url": "https://www.daitron.co.jp/eaton/products/eaton-5px-ups.html",
+   "runtime": [
+    [
+     200,
+     59
+    ],
+    [
+     300,
+     29
+    ],
+    [
+     400,
+     22
+    ],
+    [
+     500,
+     17
+    ],
+    [
+     750,
+     10
+    ],
+    [
+     1000,
+     7
+    ],
+    [
+     1200,
+     5
+    ]
+   ],
+   "caution": null,
+   "memo": null,
+   "source": "https://www.daitron.co.jp/eaton/products/eaton-5px-ups.html",
+   "outlets": {
+    "backup": 8,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "5PX1500iRT2U",
+   "maker": "eaton",
+   "name": "Eaton 5PX1500iRT2U",
+   "va": 1500,
+   "watt": 1350,
+   "form": "tower-rack",
+   "rackU": 2,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "販売終了",
+   "url": "https://www.daitron.co.jp/eaton/products/eaton-5px-ups.html",
+   "runtime": [
+    [
+     200,
+     54
+    ],
+    [
+     300,
+     28
+    ],
+    [
+     400,
+     20
+    ],
+    [
+     500,
+     16
+    ],
+    [
+     750,
+     9
+    ],
+    [
+     1000,
+     6
+    ],
+    [
+     1350,
+     3
+    ]
+   ],
+   "caution": "200V電源が必要です（一般的な100Vコンセントでは使えません）",
+   "memo": null,
+   "source": "https://www.daitron.co.jp/eaton/products/eaton-5px-ups.html",
+   "outlets": {
+    "backup": 8,
+    "surgeOnly": 0,
+    "type": "IEC C13（200V系）",
+    "note": null
+   }
+  },
+  {
+   "model": "5PX3000RT2U",
+   "maker": "eaton",
+   "name": "Eaton 5PX3000RT2U",
+   "va": 2400,
+   "watt": 2160,
+   "form": "tower-rack",
+   "rackU": 2,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "販売終了",
+   "url": "https://www.daitron.co.jp/eaton/products/eaton-5px-ups.html",
+   "runtime": [
+    [
+     300,
+     61
+    ],
+    [
+     400,
+     50
+    ],
+    [
+     500,
+     38
+    ],
+    [
+     750,
+     24
+    ],
+    [
+     1000,
+     16
+    ],
+    [
+     1500,
+     9
+    ],
+    [
+     2000,
+     5
+    ],
+    [
+     2160,
+     4
+    ]
+   ],
+   "caution": "30A用の専用コンセントが必要です",
+   "memo": null,
+   "source": "https://www.daitron.co.jp/eaton/products/eaton-5px-ups.html",
+   "outlets": {
+    "backup": 7,
+    "surgeOnly": 0,
+    "type": "NEMA 5-20R×6、L5-30R×1",
+    "note": null
+   }
+  },
+  {
+   "model": "5PX3000iRT2U",
+   "maker": "eaton",
+   "name": "Eaton 5PX3000iRT2U",
+   "va": 2700,
+   "watt": 2430,
+   "form": "tower-rack",
+   "rackU": 2,
+   "topology": "ラインインタラクティブ",
+   "waveform": "正弦波",
+   "salesStatus": "販売終了",
+   "url": "https://www.daitron.co.jp/eaton/products/eaton-5px-ups.html",
+   "runtime": [
+    [
+     300,
+     61
+    ],
+    [
+     400,
+     50
+    ],
+    [
+     500,
+     38
+    ],
+    [
+     750,
+     24
+    ],
+    [
+     1000,
+     16
+    ],
+    [
+     1500,
+     9
+    ],
+    [
+     2000,
+     5
+    ],
+    [
+     2430,
+     3
+    ]
+   ],
+   "caution": "200V電源が必要です（一般的な100Vコンセントでは使えません）",
+   "memo": null,
+   "source": "https://www.daitron.co.jp/eaton/products/eaton-5px-ups.html",
+   "outlets": {
+    "backup": 9,
+    "surgeOnly": 0,
+    "type": "IEC C13×8、C19×1（200V系）",
+    "note": null
+   }
+  },
+  {
+   "model": "EX900TJ",
+   "maker": "eaton",
+   "name": "Eaton EX900TJ",
+   "va": 900,
+   "watt": 810,
+   "form": "tower",
+   "rackU": null,
+   "topology": "常時インバータ",
+   "waveform": "正弦波",
+   "salesStatus": "販売終了",
+   "url": "https://www.daitron.co.jp/eaton/products/eaton-ex-ups.html",
+   "runtime": [
+    [
+     250,
+     30
+    ],
+    [
+     500,
+     12
+    ],
+    [
+     750,
+     6
+    ],
+    [
+     810,
+     5
+    ]
+   ],
+   "caution": null,
+   "memo": null,
+   "source": "https://www.daitron.co.jp/eaton/products/eaton-ex-ups.html",
+   "outlets": {
+    "backup": 4,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "EX1000T",
+   "maker": "eaton",
+   "name": "Eaton EX1000T",
+   "va": 1000,
+   "watt": 900,
+   "form": "tower",
+   "rackU": null,
+   "topology": "常時インバータ",
+   "waveform": "正弦波",
+   "salesStatus": "販売終了",
+   "url": "https://www.daitron.co.jp/eaton/products/eaton-ex-ups.html",
+   "runtime": [
+    [
+     250,
+     30
+    ],
+    [
+     500,
+     12
+    ],
+    [
+     750,
+     6
+    ],
+    [
+     900,
+     3
+    ]
+   ],
+   "caution": "200V電源が必要です（一般的な100Vコンセントでは使えません）",
+   "memo": null,
+   "source": "https://www.daitron.co.jp/eaton/products/eaton-ex-ups.html",
+   "outlets": {
+    "backup": 6,
+    "surgeOnly": 0,
+    "type": "IEC C13（200V系）",
+    "note": null
+   }
+  },
+  {
+   "model": "EX1150TJ",
+   "maker": "eaton",
+   "name": "Eaton EX1150TJ",
+   "va": 1150,
+   "watt": 1030,
+   "form": "tower",
+   "rackU": null,
+   "topology": "常時インバータ",
+   "waveform": "正弦波",
+   "salesStatus": "販売終了",
+   "url": "https://www.daitron.co.jp/eaton/products/eaton-ex-ups.html",
+   "runtime": [
+    [
+     250,
+     36
+    ],
+    [
+     500,
+     17
+    ],
+    [
+     750,
+     9
+    ],
+    [
+     1000,
+     6
+    ],
+    [
+     1030,
+     6
+    ]
+   ],
+   "caution": null,
+   "memo": null,
+   "source": "https://www.daitron.co.jp/eaton/products/eaton-ex-ups.html",
+   "outlets": {
+    "backup": 4,
+    "surgeOnly": 0,
+    "type": "NEMA 5-15R",
+    "note": null
+   }
+  },
+  {
+   "model": "EX2400RT2UJ",
+   "maker": "eaton",
+   "name": "Eaton EX2400RT2UJ",
+   "va": 2400,
+   "watt": 2150,
+   "form": "tower-rack",
+   "rackU": 2,
+   "topology": "常時インバータ",
+   "waveform": "正弦波",
+   "salesStatus": "販売終了",
+   "url": "https://www.daitron.co.jp/eaton/products/eaton-ex-ups.html",
+   "runtime": [
+    [
+     250,
+     79
+    ],
+    [
+     500,
+     41
+    ],
+    [
+     750,
+     26
+    ],
+    [
+     1000,
+     18
+    ],
+    [
+     2000,
+     7
+    ],
+    [
+     2150,
+     7
+    ]
+   ],
+   "caution": "30A用の専用コンセントが必要です",
+   "memo": null,
+   "source": "https://www.daitron.co.jp/eaton/products/eaton-ex-ups.html",
+   "outlets": {
+    "backup": 7,
+    "surgeOnly": 0,
+    "type": "NEMA 5-20R×6、L5-30R×1",
+    "note": null
+   }
+  },
+  {
+   "model": "EX3000RT2UH",
+   "maker": "eaton",
+   "name": "Eaton EX3000RT2UH",
+   "va": 2700,
+   "watt": 2430,
+   "form": "tower-rack",
+   "rackU": 2,
+   "topology": "常時インバータ",
+   "waveform": "正弦波",
+   "salesStatus": "販売終了",
+   "url": "https://www.daitron.co.jp/eaton/products/eaton-ex-ups.html",
+   "runtime": [
+    [
+     250,
+     65
+    ],
+    [
+     500,
+     43
+    ],
+    [
+     750,
+     25
+    ],
+    [
+     1000,
+     20
+    ],
+    [
+     2000,
+     6
+    ],
+    [
+     2430,
+     4
+    ]
+   ],
+   "caution": "200V電源が必要です（一般的な100Vコンセントでは使えません）",
+   "memo": null,
+   "source": "https://www.daitron.co.jp/eaton/products/eaton-ex-ups.html",
+   "outlets": {
+    "backup": 9,
+    "surgeOnly": 0,
+    "type": "IEC C13×8、C19×1（200V系）",
+    "note": null
+   }
+  }
+ ]
+}

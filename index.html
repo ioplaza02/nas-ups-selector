@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LAN DISK用 UPSセレクター（試作）</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="password-gate" id="password-gate">
+  <form class="password-gate__box" id="password-form">
+    <p class="password-gate__title">LAN DISK用 UPSセレクター（試作）</p>
+    <p class="password-gate__note">関係者限定の試作版です。パスワードを入力してください。</p>
+    <div class="password-gate__field">
+      <input type="password" id="password-input" class="password-gate__input" autocomplete="off">
+      <button type="button" id="password-toggle" class="password-gate__toggle" aria-label="パスワードを表示">👁</button>
+    </div>
+    <button type="submit" class="password-gate__submit">入る</button>
+    <p class="password-gate__error" id="password-error" hidden>パスワードが違います</p>
+  </form>
+</div>
+
+<div id="app-root" hidden>
+
+<!-- 印刷（PDF保存）用の見出し：画面には出さない -->
+<div class="print-header" id="print-header"></div>
+
+
+<header class="brand-banner">
+  <div class="brand-banner__left">
+    <p class="brand-banner__badge">LAN DISK用 UPSセレクター</p>
+  </div>
+  <div class="brand-banner__search">
+    <div class="search">
+      <input type="text" id="model-input" class="search__input" placeholder="LAN DISKの型番、またはUPSの型番を入力" autocomplete="off">
+      <div class="search__suggest" id="model-suggest" hidden></div>
+    </div>
+  </div>
+</header>
+<div class="hint-bar">
+  <p class="hero__hint">型番の一部だけでもOK。例：「LX04」→ HDL4-LX04、「SMT750」→ SMT750J。UPSの型番から、使えるLAN DISKを調べることもできます。</p>
+</div>
+
+<div class="page">
+  <!-- 左：絞り込み（常に表示） -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__inner">
+      <p class="sidebar__title">絞り込み</p>
+
+      <div class="filter-group">
+        <p class="filter-group__label">メーカー</p>
+        <label class="check"><input type="checkbox" name="maker" value="apc" checked> APC（シュナイダーエレクトリック）</label>
+        <label class="check"><input type="checkbox" name="maker" value="omron" checked> オムロン</label>
+        <label class="check"><input type="checkbox" name="maker" value="fuji" checked> 富士電機</label>
+        <label class="check"><input type="checkbox" name="maker" value="eaton" checked> EATON</label>
+      </div>
+
+      <div class="filter-group">
+        <p class="filter-group__label">設置方法</p>
+        <label class="check"><input type="checkbox" name="form" value="floor" checked> 据え置き（床・机）</label>
+        <label class="check"><input type="checkbox" name="form" value="rack" checked> 19インチラック</label>
+      </div>
+
+      <div class="filter-group">
+        <p class="filter-group__label">こだわり条件</p>
+        <label class="check"><input type="checkbox" id="f-sine"> 停電時も正弦波で出力する</label>
+        <label class="check"><input type="checkbox" id="f-narsus"> NarSuSでUPSの状態も見られる</label>
+        <label class="check"><input type="checkbox" id="f-100v" checked> 一般的なコンセント（100V・15A）で使える</label>
+      </div>
+
+      <div class="filter-group">
+        <p class="filter-group__label">表示する対応状況</p>
+        <label class="check"><input type="checkbox" id="f-untested"> 「未検証」「確認中」も表示</label>
+        <label class="check"><input type="checkbox" id="f-discontinued"> 販売終了のUPSも表示</label>
+      </div>
+
+      <p class="sidebar__note">対応状況はI-O DATA公式の<a href="https://www.iodata.jp/pio/io/nas/landisk/ups.htm" target="_blank" rel="noopener noreferrer">ランディスク対応UPS一覧</a>に基づきます。</p>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="empty-state" id="empty-state">
+      <p class="empty-state__title">LAN DISKの型番を入力してください</p>
+      <p class="empty-state__body">上の検索欄にLAN DISKの型番（一部でも可）を入れると、そのLAN DISKで使えるUPSを<strong>4メーカーまとめて</strong>表示します。いっしょにつなぐ機器を選ぶと、停電したときに何分くらい電気がもつかの目安も出します。</p>
+      <p class="empty-state__body">UPSの型番を入れると、そのUPSが使えるLAN DISKの一覧を表示します。</p>
+    </div>
+
+    <!-- ===== LAN DISKから探す ===== -->
+    <div id="nas-view" hidden>
+      <section class="panel nas-info">
+        <div class="nas-info__head">
+          <img class="nas-info__image" id="nas-image" src="" alt="" hidden>
+          <div class="nas-info__text">
+            <h2 id="nas-model"></h2>
+            <p class="nas-info__desc" id="nas-desc"></p>
+          </div>
+          <span class="os-badge" id="nas-os"></span>
+        </div>
+      </section>
+
+      <section class="panel load-panel" id="load-panel">
+        <h3 class="panel__title">UPSにつなぐ機器と、停電時に必要な時間</h3>
+        <p class="panel__lead">UPSにはLAN DISKだけでなく、バックアップ用HDDやスイッチングハブなども一緒につなぐのが一般的です。つなぐ機器が増えるほど電気を多く使うので、停電したときにUPSのバッテリーがもつ時間は短くなります。</p>
+
+        <div class="load-rows" id="load-rows"></div>
+        <button type="button" class="add-btn" id="add-device-btn">＋ 機器を追加する</button>
+        <div class="device-picker" id="device-picker" hidden></div>
+
+        <div class="load-total">
+          <div class="load-total__item">
+            <p class="load-total__label">合計の消費電力（目安）</p>
+            <p class="load-total__value"><span id="total-watt">0</span> W</p>
+            <p class="load-total__formula" id="total-formula"></p>
+            <p class="load-total__formula" id="plug-count"></p>
+          </div>
+          <div class="load-total__item">
+            <p class="load-total__label">停電後、最低限もってほしい時間</p>
+            <div class="minute-btns" id="minute-btns"></div>
+          </div>
+        </div>
+        <p class="load-why" id="load-why"></p>
+      </section>
+
+      <section class="panel setup-panel" id="setup-panel"></section>
+
+      <div class="result-head">
+        <h3 id="result-title">このLAN DISKで使えるUPS</h3>
+        <p class="result-count" id="result-count"></p>
+        <div class="result-actions">
+          <button type="button" class="share-btn" id="share-btn">結果のURLをコピー</button>
+          <button type="button" class="share-btn" id="pdf-btn">PDFで保存</button>
+          <span class="share-feedback" id="share-feedback" hidden></span>
+        </div>
+      </div>
+      <div id="ups-results"></div>
+    </div>
+
+    <!-- ===== UPSから探す ===== -->
+    <div id="ups-view" hidden>
+      <section class="panel ups-info" id="ups-info"></section>
+      <div class="result-head">
+        <h3>このUPSが使えるLAN DISK</h3>
+        <p class="result-count" id="nas-count"></p>
+        <div class="result-actions">
+          <button type="button" class="share-btn" id="share-btn-ups">結果のURLをコピー</button>
+          <span class="share-feedback" id="share-feedback-ups" hidden></span>
+        </div>
+      </div>
+      <div id="nas-results"></div>
+    </div>
+  </main>
+</div>
+
+<footer class="info-footer">
+  <div class="info-footer__inner">
+    <p class="info-footer__title">このツールについて</p>
+    <ul class="info-footer__list">
+      <li>UPSとLAN DISKの組み合わせの対応状況は、I-O DATA公式の<a href="https://www.iodata.jp/pio/io/nas/landisk/ups.htm" target="_blank" rel="noopener noreferrer">ランディスク対応UPS一覧</a>をそのまま反映しています（<span id="source-date"></span>）。ご購入前に公式ページでもご確認ください。</li>
+      <li><strong>停電時に電気がもつ時間は目安です。</strong>各UPSメーカーが公表している「つないだ機器の消費電力ごとのバックアップ時間」から計算しています。バッテリーは使用年数や周囲の温度で性能が落ちるため、余裕を持った容量をおすすめします。</li>
+      <li>LAN DISKの消費電力は、各商品の仕様に記載の最大消費電力を使っています（いちばん電気を使う状態で計算するため、安全側の目安になります）。周辺機器は一般的な製品の値を目安として入れています。お使いの機器の値が分かる場合は書き換えてください。</li>
+      <li>UPSの容量・運転時間・販売状況は各メーカーの公開情報をもとにしています。最新情報は各UPSメーカーのページでご確認ください。</li>
+    </ul>
+    <p class="info-footer__updated" id="updated-at"></p>
+  </div>
+</footer>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

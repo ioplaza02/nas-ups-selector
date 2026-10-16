@@ -1,0 +1,17 @@
+{
+ "note": "Linux系LAN DISKの「UPS連動の設定方法」マニュアルへのリンク（手作業で整備、2026-10-16）。verified=true はページ内にUPSの説明があることを確認済み。falseは同じ作りのマニュアルからの推定で、公開前にブラウザで確認すること。seriesは公式UPS対応表のシリーズ名。",
+ "linux": [
+  { "name": "HDL-LXシリーズ", "series": ["HDL4-LX", "HDL4-LXU", "HDL2-LX"], "url": "https://www.iodata.jp/lib/manual/hdl-lx/search.html?search-by=UPS", "type": "search", "verified": true },
+  { "name": "HDL-LVシリーズ", "series": ["HDL4-LV", "HDL4-LVB", "HDL4-LVU", "HDL4-LVUB", "HDL2-LV", "HDL2-LVB"], "url": "https://www.iodata.jp/lib/manual/hdl-lv/index.html#_search_ups", "type": "search", "verified": true },
+  { "name": "HDL-HBシリーズ", "series": ["HDL6-HB", "HDL4-HBEX", "HDL2-HB"], "url": "https://www.iodata.jp/lib/manual/hdl-hb/search.html?search-by=UPS", "type": "search", "verified": true },
+  { "name": "HDL-HAシリーズ", "series": ["HDL6-HAB", "HDL6-HA", "HDL4-HAEXB", "HDL4-HAEX", "HDL2-HAB", "HDL2-HA", "HDL4-HAB-U", "HDL4-HA-U"], "url": "https://www.iodata.jp/lib/manual/hdl-ha_manual/index.html#_search_ups", "type": "search", "verified": false },
+  { "name": "HDL-Hシリーズ（旧モデル）", "series": ["HDL6-H", "HDL4-HEX", "HDL2-H", "HDL4-HR"], "url": "https://www.iodata.jp/lib/manual/pdf2/hdl6-hmanual.pdf", "type": "pdf", "verified": true },
+  { "name": "HDL-XAシリーズ", "series": ["HDL4-XAB", "HDL4-XA", "HDL2-XAB", "HDL2-XA", "HDL4-XAB-U", "HDL4-XA-U"], "url": "https://www.iodata.jp/lib/manual/hdl-xa_manual/index.html#_search_ups", "type": "search", "verified": false },
+  { "name": "HDL-Xシリーズ（旧モデル）", "series": ["HDL4-X", "HDL2-X", "HDL4-X-U"], "url": "https://www.iodata.jp/lib/manual/hdl2-x_manual/index.html#p10_2", "type": "page", "verified": true },
+  { "name": "HDL-LE／LENシリーズ", "series": ["HDL2-LEN", "HDL2-LENB", "HDL1-LEN", "HDL1-LENB", "HDL2-LE", "HDL1-LE"], "url": "https://www.iodata.jp/lib/manual/hdl-le/index.html#etc_ups", "type": "page", "verified": true },
+  { "name": "HDL-LAシリーズ（SOHO）", "series": ["HDL1-LASOHO", "HDL1-LA", "HDL1-LA/E"], "url": "https://www.iodata.jp/lib/manual/hdl-la/index.html#etc_ups", "type": "page", "verified": true },
+  { "name": "HDL-AA／AAWシリーズ", "series": ["HDL-AA", "HDL-AA/E", "HDL2-AA", "HDL2-AA/E", "HDL2-AA0/E", "IPHL2-AA0", "HDL-AAW", "HDL2-AAW"], "url": "https://www.iodata.jp/lib/manual/hdl-aa_manual/index.html#p10_2", "type": "page", "verified": true },
+  { "name": "HDL-AAXシリーズ", "series": ["HDL-AAX", "HDL2-AAX"], "url": "https://www.iodata.jp/lib/manual/hdl-aax/index.html#_search_ups", "type": "search", "verified": false },
+  { "name": "HDL-AAXWシリーズ", "series": ["HDL-AAXW", "HDL2-AAXW", "HDL2-AAXWB"], "url": "https://www.iodata.jp/lib/manual/hdl-aaxw/index.html#_search_ups", "type": "search", "verified": false }
+ ]
+}
