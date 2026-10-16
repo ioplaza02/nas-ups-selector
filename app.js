@@ -428,7 +428,6 @@
       el("#nas-os").textContent = "";
       el("#load-panel").hidden = true;
       el("#setup-panel").hidden = true;
-      el("#pdf-btn").hidden = true;
       el("#result-count").textContent = "";
       el("#ups-results").innerHTML = `<div class="no-match">この機種は、I-O DATA公式の<a href="https://www.iodata.jp/pio/io/nas/landisk/ups.htm" target="_blank" rel="noopener noreferrer">ランディスク対応UPS一覧</a>に掲載されていません。UPSとの組み合わせについては、販売店またはI-O DATAへお問い合わせください。</div>`;
       updateUrl();
@@ -444,7 +443,6 @@
     osEl.className = `os-badge os-badge--${os}`;
     el("#load-panel").hidden = false;
     el("#setup-panel").hidden = false;
-    el("#pdf-btn").hidden = false;
 
     if (!fromUrl) {
       state.minutes = DEFAULT_MINUTES;
@@ -1171,7 +1169,7 @@
     selectNas(it, true);
   }
 
-  // ---------- URLのコピー・PDF保存 ----------
+  // ---------- URLのコピー ----------
   // window.alert等は環境によって無効化されることがあるので使わない（NASセレクターの教訓⑤）
 
   function copyUrl(feedbackEl) {
@@ -1201,19 +1199,7 @@
   el("#share-btn").addEventListener("click", () => copyUrl(el("#share-feedback")));
   el("#share-btn-ups").addEventListener("click", () => copyUrl(el("#share-feedback-ups")));
 
-  // PDFのファイル名：型番＋UPS＋日付8桁（NASセレクターと同じ考え方。例 HDL4-LX04_UPS_20261016.pdf）
-  el("#pdf-btn").addEventListener("click", () => {
-    const d = new Date();
-    const ymd = `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, "0")}${String(d.getDate()).padStart(2, "0")}`;
-    const original = document.title;
-    document.title = `${(state.nasSku || "LANDISK").replace(/[\\/:*?"<>|]/g, "-")}_UPS_${ymd}`;
-    // 折りたたみ部分も印刷に出す
-    const closed = [...document.querySelectorAll("#ups-results details:not([open])")];
-    closed.forEach((x) => x.setAttribute("open", ""));
-    window.print();
-    closed.forEach((x) => x.removeAttribute("open"));
-    document.title = original;
-  });
+  // 「PDFで保存」は置かない（他社のUPSを紹介するページのため、資料として持ち出す形にはしない。2026-10-16決定）
 
   function renderPrintHeader() {
     const d = new Date();
