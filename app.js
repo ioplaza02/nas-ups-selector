@@ -53,7 +53,7 @@
   const WINDOWS_SUMMARY = {
     apc: "管理ソフト「PowerChute」は<strong>別売</strong>です。UPSとは別にご購入ください。USBでつなぐ場合は接続用ケーブル（AP98117J）、ネットワーク経由で連動させる場合はネットワークマネジメントカードも別途必要です。",
     omron: "<strong>UPSに付属</strong>の管理ソフトウェア（PowerAttendant など）を使います。",
-    fuji: "富士電機の管理ソフトウェアを使います（下の一覧のソフトが対応しています）。",
+    fuji: "富士電機の管理ソフトウェア（PowerUX など）を使います。",
     eaton: "<strong>UPSに付属</strong>の管理ソフトウェアを使います。LAN経由で接続する場合は、別売のネットワークマネジメントカードが必要です。"
   };
   const STATUS_RANK = { ok: 3, checking: 2, untested: 1, ng: 0 };
@@ -964,21 +964,40 @@
       const blocksHtml = makers.map((mk) => {
         const b = compat.blocks.find((x) => x.os === "windows" && x.maker === mk);
         const soft = [...sw.values()].filter((s) => s.maker === mk && (s.status === "ok" || s.status === "checking"));
-        const softHtml = soft.length
-          ? `<ul class="soft-list">${soft.map((s) => `<li><strong>${esc(s.label)}</strong>${s.status === "checking" ? "（確認中）" : ""}${
-              noteTexts(s.block, [...s.notes]).map((t) => `<span class="soft-list__note">${t}</span>`).join("")}</li>`).join("")}</ul>`
-          : "";
+        // 閉じているとき：要点の一言＋使える管理ソフトの名前（短いチップ）だけを見せる
+        // 開いたとき：ソフトごとの注意と、公式対応表の注意事項をすべて見せる
+        const chips = soft.map((s) => `<span class="soft-chip">${esc(s.label.replace(/[（(].*$/, ""))}${s.status === "checking" ? "（確認中）" : ""}</span>`).join("");
+        const softDetail = soft.map((s) => {
+          const notes = noteTexts(s.block, [...s.notes]);
+          return `<li><strong>${esc(s.label)}</strong>${s.status === "checking" ? "（確認中）" : ""}${notes.map((t) => `<span class="soft-list__note">${t}</span>`).join("")}</li>`;
+        }).join("");
         const general = b ? b.general.map((n) => `<li>${noteHtml(n)}</li>`).join("") : "";
+        const count = soft.length + (b ? b.general.length : 0);
+        const moreId = `setup-more-${mk}`;
         return `<div class="setup-maker">
           <p class="setup-maker__name">${esc(MAKER_SHORT[mk])}のUPSを使う場合</p>
           <p class="setup-maker__text">${WINDOWS_SUMMARY[mk] || ""}</p>
-          ${softHtml ? `<p class="setup-maker__sub">このLAN DISKで使える管理ソフト</p>${softHtml}` : ""}
-          ${general ? `<details class="setup-maker__more"><summary>公式対応表の注意事項</summary><ul class="setup-maker__notes">${general}</ul></details>` : ""}
+          ${chips ? `<p class="setup-maker__sub">このLAN DISKで使える管理ソフト</p><div class="soft-chips">${chips}</div>` : ""}
+          ${count ? `<button type="button" class="setup-maker__toggle" aria-expanded="false" aria-controls="${moreId}">
+              <span>ソフトごとの注意・公式の注意事項（${count}件）を見る</span><span class="setup-maker__arrow" aria-hidden="true">▾</span></button>
+            <div class="setup-maker__more" id="${moreId}"><div class="setup-maker__more-inner">
+              ${softDetail ? `<p class="setup-maker__sub">管理ソフトごとの注意</p><ul class="soft-list">${softDetail}</ul>` : ""}
+              ${general ? `<p class="setup-maker__sub">公式対応表の注意事項</p><ul class="setup-maker__notes">${general}</ul>` : ""}
+            </div></div>` : ""}
         </div>`;
       }).join("");
       box.innerHTML = `<h3 class="panel__title">導入のしかた（Windows OS搭載のLAN DISK）</h3>
         <p class="panel__lead">Windows OS搭載のLAN DISKでは、<strong>UPSメーカーの管理ソフトウェア</strong>をLAN DISKにインストールして、停電時の自動シャットダウンを設定します。使うソフトはUPSのメーカーによって異なります。</p>
         <div class="setup-makers">${blocksHtml}</div>`;
+      box.querySelectorAll(".setup-maker__toggle").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const open = btn.getAttribute("aria-expanded") !== "true";
+          btn.setAttribute("aria-expanded", open ? "true" : "false");
+          btn.closest(".setup-maker").classList.toggle("setup-maker--open", open);
+          btn.querySelector("span").textContent = open ? "閉じる" : btn.dataset.label;
+        });
+        btn.dataset.label = btn.querySelector("span").textContent;
+      });
     }
   }
 

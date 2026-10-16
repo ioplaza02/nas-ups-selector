@@ -334,8 +334,26 @@ a { color: var(--accent-deep); }
 .setup-maker__sub { margin: 8px 0 2px; font-size: 12px; font-weight: 700; color: var(--text-soft); }
 .soft-list { margin: 0 0 8px; padding-left: 18px; font-size: 13px; }
 .soft-list__note { display: block; font-size: 12px; color: var(--text-soft); }
-.setup-maker__more { margin-top: 6px; font-size: 12px; }
-.setup-maker__notes { margin: 6px 0 0; padding-left: 18px; font-size: 12px; color: var(--text-soft); }
+.setup-makers { align-items: start; }
+.soft-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 2px 0 4px; }
+.soft-chip { font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 999px; background: var(--accent-bg); color: var(--accent-deep); }
+/* メーカーごとの開閉ボタン。閉じていても「続きがある」と分かるよう、件数と▾を出す */
+.setup-maker__toggle {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px; width: 100%; margin-top: 10px;
+  padding: 8px 12px; font: inherit; font-size: 12px; font-weight: 700; color: var(--accent-deep);
+  background: #fff; border: 1px solid #c5d6f4; border-radius: 10px; cursor: pointer; text-align: left;
+  transition: background .15s, transform .15s var(--ease), box-shadow .15s;
+}
+.setup-maker__toggle:hover { background: var(--accent-bg); transform: translateY(-1px); box-shadow: 0 4px 10px rgba(47,111,208,.15); }
+.setup-maker__toggle:active { transform: translateY(1px); }
+.setup-maker__arrow { transition: transform .3s var(--ease); flex-shrink: 0; }
+.setup-maker--open .setup-maker__arrow { transform: rotate(180deg); }
+/* 高さ0 → 中身の高さ へなめらかに伸びる */
+.setup-maker__more { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .35s var(--ease); }
+.setup-maker--open .setup-maker__more { grid-template-rows: 1fr; }
+.setup-maker__more-inner { overflow: hidden; min-height: 0; opacity: 0; transition: opacity .3s; }
+.setup-maker--open .setup-maker__more-inner { opacity: 1; padding-top: 4px; }
+.setup-maker__notes { margin: 4px 0 0; padding-left: 18px; font-size: 12px; color: var(--text-soft); }
 .setup-maker__notes li { margin-bottom: 4px; }
 
 /* ---------- 折りたたみ（details）をなめらかに開く ---------- */
@@ -538,5 +556,8 @@ details > summary { color: var(--text-soft); font-weight: 700; }
   .ups-card:hover { transform: none; }
   .ups-grid { grid-template-columns: repeat(2, 1fr); }
   .load-row input { border: none; }
+  .setup-maker__toggle { display: none !important; }
+  .setup-maker__more { grid-template-rows: 1fr !important; }
+  .setup-maker__more-inner { opacity: 1 !important; }
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
