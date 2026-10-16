@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LAN DISK用 UPSセレクター（試作）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -28,55 +30,81 @@
 
 
 <header class="brand-banner">
+  <span class="brand-banner__deco" aria-hidden="true"></span>
   <div class="brand-banner__left">
-    <p class="brand-banner__badge">LAN DISK用 UPSセレクター</p>
+    <img src="landisk-logo.png" alt="LAN DISK" class="brand-banner__logo">
+    <p class="brand-banner__badge">UPSセレクター</p>
   </div>
   <div class="brand-banner__search">
-    <div class="search">
-      <input type="text" id="model-input" class="search__input" placeholder="LAN DISKの型番、またはUPSの型番を入力" autocomplete="off">
-      <div class="search__suggest" id="model-suggest" hidden></div>
+    <!-- 型番を入れようとして「分からない」と思ったその場で目に入るよう、検索窓のすぐ右隣に並べる（ISSセレクターと同じ） -->
+    <div class="search-row">
+      <div class="search">
+        <input type="text" id="model-input" class="search__input" placeholder="型番を入力してください" autocomplete="off">
+        <div class="search__suggest" id="model-suggest" hidden></div>
+      </div>
+      <button type="button" class="browse-toggle" id="browse-toggle" aria-expanded="false" aria-controls="browse-panel">
+        <span class="browse-toggle__icon" aria-hidden="true">☰</span>
+        一覧から機種を選ぶ
+        <span class="browse-toggle__arrow" aria-hidden="true">▾</span>
+      </button>
     </div>
+    <p class="hero__hint">容量まで含めた完全な型番でなくてもOK。例えば「LX04」だけでも「HDL4-LX04」が候補に出ます。UPSの型番（例：SMT750J）からも探せます。</p>
   </div>
 </header>
-<div class="hint-bar">
-  <p class="hero__hint">型番の一部だけでもOK。例：「LX04」→ HDL4-LX04、「SMT750」→ SMT750J。UPSの型番から、使えるLAN DISKを調べることもできます。</p>
+
+<section class="browse-panel" id="browse-panel" aria-label="一覧から機種を選ぶ">
+  <div class="browse-panel__inner">
+    <div class="browse-panel__head">
+      <p class="browse-panel__title">機種を選ぶ<span class="browse-panel__sub">シリーズ名を確認して、お使いの（またはご購入予定の）容量のボタンを押すと、そのLAN DISKで使えるUPSが表示されます</span></p>
+      <button type="button" class="browse-panel__close" id="browse-close">閉じる ▴</button>
+    </div>
+    <div class="browse-filters" id="browse-filters"></div>
+    <p class="browse-count" id="browse-count"></p>
+    <div class="browse-grid" id="browse-grid"></div>
+  </div>
+</section>
+
+<div class="page-hero">
+  <div class="page-hero__inner">
+    <h1 class="page-hero__title">UPS選定ツール</h1>
+    <p class="page-hero__sub">NASの型番から、連動して使えるUPS（無停電電源装置）と、停電したときに何分もつかの目安を確認できます</p>
+  </div>
 </div>
 
 <div class="page">
-  <!-- 左：絞り込み（常に表示） -->
-  <aside class="sidebar" id="sidebar">
-    <div class="sidebar__inner">
-      <p class="sidebar__title">絞り込み</p>
+  <!-- 左：絞り込み（常に表示。スマホでは折りたたみ） -->
+  <aside class="filter-panel" id="sidebar" aria-label="絞り込み条件">
+    <p class="sidebar__title">絞り込み</p>
 
-      <div class="filter-group">
-        <p class="filter-group__label">メーカー</p>
-        <label class="check"><input type="checkbox" name="maker" value="apc" checked> APC（シュナイダーエレクトリック）</label>
-        <label class="check"><input type="checkbox" name="maker" value="omron" checked> オムロン</label>
-        <label class="check"><input type="checkbox" name="maker" value="fuji" checked> 富士電機</label>
-        <label class="check"><input type="checkbox" name="maker" value="eaton" checked> EATON</label>
-      </div>
-
-      <div class="filter-group">
-        <p class="filter-group__label">設置方法</p>
-        <label class="check"><input type="checkbox" name="form" value="floor" checked> 据え置き（床・机）</label>
-        <label class="check"><input type="checkbox" name="form" value="rack" checked> 19インチラック</label>
-      </div>
-
-      <div class="filter-group">
-        <p class="filter-group__label">こだわり条件</p>
-        <label class="check"><input type="checkbox" id="f-sine"> 停電時も正弦波で出力する</label>
-        <label class="check"><input type="checkbox" id="f-narsus"> NarSuSでUPSの状態も見られる</label>
-        <label class="check"><input type="checkbox" id="f-100v" checked> 一般的なコンセント（100V・15A）で使える</label>
-      </div>
-
-      <div class="filter-group">
-        <p class="filter-group__label">表示する対応状況</p>
-        <label class="check"><input type="checkbox" id="f-untested"> 「未検証」「確認中」も表示</label>
-        <label class="check"><input type="checkbox" id="f-discontinued"> 販売終了のUPSも表示</label>
-      </div>
-
-      <p class="sidebar__note">対応状況はI-O DATA公式の<a href="https://www.iodata.jp/pio/io/nas/landisk/ups.htm" target="_blank" rel="noopener noreferrer">ランディスク対応UPS一覧</a>に基づきます。</p>
+    <div class="filter-group">
+      <p class="filter-group__label">メーカー</p>
+      <label class="filter-option"><input type="checkbox" name="maker" value="apc" checked> APC（シュナイダーエレクトリック）</label>
+      <label class="filter-option"><input type="checkbox" name="maker" value="omron" checked> オムロン</label>
+      <label class="filter-option"><input type="checkbox" name="maker" value="fuji" checked> 富士電機</label>
+      <label class="filter-option"><input type="checkbox" name="maker" value="eaton" checked> EATON</label>
     </div>
+
+    <div class="filter-group">
+      <p class="filter-group__label">設置方法</p>
+      <label class="filter-option"><input type="checkbox" name="form" value="floor" checked> 据え置き（床・机）</label>
+      <label class="filter-option"><input type="checkbox" name="form" value="rack" checked> 19インチラック</label>
+    </div>
+
+    <div class="filter-group">
+      <p class="filter-group__label">こだわり条件</p>
+      <label class="filter-option"><input type="checkbox" id="f-sine"> 停電時も正弦波で出力する</label>
+      <label class="filter-option"><input type="checkbox" id="f-narsus"> NarSuSでUPSの状態も見られる</label>
+      <label class="filter-option"><input type="checkbox" id="f-100v" checked> 一般的なコンセント（100V・15A）で使える</label>
+    </div>
+
+    <div class="filter-group">
+      <p class="filter-group__label">表示する対応状況</p>
+      <label class="filter-option"><input type="checkbox" id="f-untested"> 「未検証」「確認中」も表示</label>
+      <label class="filter-option"><input type="checkbox" id="f-discontinued"> 販売終了のUPSも表示</label>
+    </div>
+
+    <button type="button" class="filter-reset" id="filter-reset">絞り込みを解除する</button>
+    <p class="sidebar__note">対応状況はI-O DATA公式の<a href="https://www.iodata.jp/pio/io/nas/landisk/ups.htm" target="_blank" rel="noopener noreferrer">ランディスク対応UPS一覧</a>に基づきます。</p>
   </aside>
 
   <main class="main">
@@ -84,6 +112,7 @@
       <p class="empty-state__title">LAN DISKの型番を入力してください</p>
       <p class="empty-state__body">上の検索欄にLAN DISKの型番（一部でも可）を入れると、そのLAN DISKで使えるUPSを<strong>4メーカーまとめて</strong>表示します。いっしょにつなぐ機器を選ぶと、停電したときに何分くらい電気がもつかの目安も出します。</p>
       <p class="empty-state__body">UPSの型番を入れると、そのUPSが使えるLAN DISKの一覧を表示します。</p>
+      <p class="empty-state__body">型番を入力しなくても、<button type="button" class="link-btn" id="browse-open-inline">一覧から機種を選ぶ</button>こともできます。</p>
     </div>
 
     <!-- ===== LAN DISKから探す ===== -->

@@ -128,7 +128,7 @@
       return loadJson(NAS_DATA_URL)
         .then((n) => { nasProducts = n.products || []; })
         .catch(() => { nasProducts = []; })
-        .then(() => { buildSearchItems(); applyStateFromUrl(); });
+        .then(() => { buildSearchItems(); applyStateFromUrl(); if (browseIsOpen()) renderBrowse(); });
     })
     .catch(() => {
       updatedAtEl.textContent = "データの読み込みに失敗しました。時間をおいて再度お試しください。";
@@ -197,7 +197,7 @@
         if (!v.sku) return;
         const code = resolveSeries(v.sku);
         if (code) coveredCodes.add(code);
-        items.push({ type: "nas", key: v.sku.toUpperCase(), label: v.sku, sub: p.name || "", code, product: p, variant: v,
+        items.push({ type: "nas", key: v.sku.toUpperCase(), label: v.sku, sub: seriesLabel(p), code, product: p, variant: v,
           discontinued: (v.status || p.status) === "生産終了" });
       });
     });
@@ -205,7 +205,7 @@
     nasCodes.forEach((code) => {
       if (coveredCodes.has(code)) return;
       const os = byNas.get(code)[0].os;
-      items.push({ type: "nas", key: code, label: code, sub: `LAN DISK（${os === "windows" ? "Windows" : "Linux"}）シリーズ`, code, product: null, variant: null });
+      items.push({ type: "nas", key: code, label: code, sub: `${code}シリーズ（${os === "windows" ? "Windows" : "Linux"}・旧機種を含む）`, code, product: null, variant: null });
     });
     [...byUps.keys()].forEach((model) => {
       const sp = specs.get(model);
@@ -218,10 +218,13 @@
     const n = normalize(q);
     if (!n) return [];
     const hits = searchItems.filter((it) => normalize(it.key).includes(n));
-    // 完全一致→前方一致→その他 の順。現行品を先に
+    // 完全一致 → 現行の型番（NASセレクターに載っているもの）→ 旧機種のシリーズ名・生産終了品 → UPS の順。
+    // それぞれの中では前方一致を先に
     const score = (it) => {
       const k = normalize(it.key);
-      return (k === n ? 0 : k.startsWith(n) ? 1 : 2) * 10 + (it.discontinued ? 1 : 0);
+      if (k === n) return 0;
+      const group = it.type === "ups" ? 3 : (!it.product || it.discontinued) ? 2 : 1;
+      return group * 10 + (k.startsWith(n) ? 0 : 1);
     };
     return hits.sort((a, b) => score(a) - score(b) || a.key.localeCompare(b.key));
   }
@@ -246,8 +249,10 @@
     shown.forEach((it) => {
       const btn = document.createElement("button");
       btn.type = "button";
-      btn.innerHTML = `<span class="sg-kind sg-kind--${it.type}">${it.type === "nas" ? "LAN DISK" : "UPS"}</span>` +
-        `<span class="sg-label">${esc(it.label)}</span><span class="sg-sub">${esc(it.sub)}</span>`;
+      // LAN DISKの型番は型番だけを大きく出す（「LAN DISK」の文字は付けない）。UPSの型番にだけ小さな印を付けて区別する
+      btn.className = it.type === "ups" ? "sg sg--ups" : "sg";
+      btn.innerHTML = `<span class="sg-label">${esc(it.label)}${it.type === "ups" ? `<span class="sg-kind">UPS</span>` : ""}</span>` +
+        (it.sub ? `<span class="sg-sub">${esc(it.sub)}</span>` : "");
       btn.addEventListener("click", () => choose(it));
       suggestBox.appendChild(btn);
     });
@@ -291,6 +296,112 @@
     nasView.hidden = true;
     upsView.hidden = true;
   }
+
+  // 「LAN DISK（HDL4-LXシリーズ）」→「HDL4-LXシリーズ」
+  function seriesLabel(p) {
+    const m = String(p.name || "").match(/（([^）]+)）/);
+    return m ? m[1] : (p.name || p.series || "");
+  }
+
+  // ---------- 一覧から機種を選ぶ（カーテンのように下りてくるパネル。ISSセレクターと同じ） ----------
+  //
+  // NASセレクターのシリーズ一覧（画像・シリーズ名・容量別の型番）をそのまま使う。
+  // 表示するのは、①生産終了でない ②公式UPS対応表に載っている（＝UPSを表示できる）型番だけ。
+  // 容量ボタンを押すと、検索欄で型番を選んだときと同じ selectNas() を呼ぶ。
+
+  const browseToggle = el("#browse-toggle");
+  const browsePanel = el("#browse-panel");
+  const browseFilters = el("#browse-filters");
+  const browseGrid = el("#browse-grid");
+  const browseCount = el("#browse-count");
+  const browseFilterState = { os: "all", install: "all", bay: "all" };
+  const BROWSE_FILTER_DEFS = [
+    { key: "os", label: "OS", options: [
+      { value: "all", label: "すべて" }, { value: "Linux OS", label: "Linux" }, { value: "Windows OS", label: "Windows" }] },
+    { key: "install", label: "置き方", options: [
+      { value: "all", label: "すべて" }, { value: "BOXタイプ", label: "BOX（据え置き）" }, { value: "ラックマウントタイプ", label: "ラックマウント" }] },
+    { key: "bay", label: "ドライブ数", options: null } // 実データから自動で作る
+  ];
+
+  function browseIsOpen() { return browsePanel.classList.contains("browse-panel--open"); }
+  function setBrowseOpen(open) {
+    browsePanel.classList.toggle("browse-panel--open", open);
+    browseToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    browseToggle.classList.toggle("browse-toggle--open", open);
+    if (open) { suggestBox.hidden = true; renderBrowse(); }
+  }
+  browseToggle.addEventListener("click", () => setBrowseOpen(!browseIsOpen()));
+  el("#browse-close").addEventListener("click", () => setBrowseOpen(false));
+  el("#browse-open-inline").addEventListener("click", () => {
+    setBrowseOpen(true);
+    browsePanel.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  const bayNumber = (bay) => Number((String(bay || "").match(/(\d+)/) || [])[1] || 0);
+
+  function browseableSeries() {
+    if (!compat) return null;
+    return nasProducts
+      .filter((p) => p.status !== "生産終了")
+      .map((p) => ({ p, variants: (p.variants || []).filter((v) => v.sku && v.status !== "生産終了" && resolveSeries(v.sku)) }))
+      .filter((x) => x.variants.length > 0);
+  }
+
+  function renderBrowse() {
+    const all = browseableSeries();
+    if (!all || all.length === 0) {
+      browseFilters.innerHTML = "";
+      browseCount.textContent = "";
+      browseGrid.innerHTML = `<p class="browse-loading">${!all ? "機種の一覧を読み込んでいます…" : "機種の一覧を読み込めませんでした。お手数ですが、上の検索欄に型番を入力してください。"}</p>`;
+      return;
+    }
+    const bays = [...new Set(all.map((x) => x.p.bay).filter(Boolean))].sort((a, b) => bayNumber(a) - bayNumber(b));
+    browseFilters.innerHTML = BROWSE_FILTER_DEFS.map((def) => {
+      const opts = def.options || [{ value: "all", label: "すべて" }, ...bays.map((b) => ({ value: b, label: b }))];
+      return `<div class="browse-filter-row"><span class="browse-filter-row__label">${def.label}</span>${opts.map((o) =>
+        `<button type="button" class="browse-pill${browseFilterState[def.key] === o.value ? " browse-pill--on" : ""}" data-key="${def.key}" data-value="${escAttr(o.value)}">${esc(o.label)}</button>`).join("")}</div>`;
+    }).join("");
+
+    const list = all
+      .filter((x) => browseFilterState.os === "all" || x.p.os === browseFilterState.os)
+      .filter((x) => browseFilterState.install === "all" || x.p.install === browseFilterState.install)
+      .filter((x) => browseFilterState.bay === "all" || x.p.bay === browseFilterState.bay)
+      .sort((a, b) => String(a.p.os).localeCompare(String(b.p.os)) || bayNumber(a.p.bay) - bayNumber(b.p.bay) ||
+        seriesLabel(a.p).localeCompare(seriesLabel(b.p)));
+    browseCount.textContent = `${list.length}シリーズ`;
+    if (!list.length) {
+      browseGrid.innerHTML = `<p class="browse-loading">この組み合わせの機種はありません。条件を「すべて」に戻してみてください。</p>`;
+      return;
+    }
+    browseGrid.innerHTML = list.map(({ p, variants }, i) => `
+      <div class="browse-card" style="animation-delay:${Math.min(i, 12) * 30}ms">
+        <div class="browse-card__image">${p.imageUrl ? `<img src="${escAttr(p.imageUrl)}" alt="" loading="lazy" onerror="this.remove()">` : ""}</div>
+        <p class="browse-card__name">${esc(seriesLabel(p))}</p>
+        <p class="browse-card__meta">${esc([p.os && p.os.replace(" OS", ""), p.install && p.install.replace("タイプ", ""), p.bay].filter(Boolean).join("・"))}</p>
+        <p class="browse-card__cap-label">容量を選ぶ</p>
+        <div class="browse-card__caps">${variants.map((v) => `<button type="button" class="cap-btn" data-sku="${escAttr(v.sku)}" title="${escAttr(v.sku)}">
+          <span class="cap-btn__tb">${v.capacityTB != null ? esc(v.capacityTB + "TB") : esc(v.sku)}</span><span class="cap-btn__sku">${esc(v.sku)}</span></button>`).join("")}</div>
+      </div>`).join("");
+  }
+
+  browseFilters.addEventListener("click", (e) => {
+    const b = e.target.closest(".browse-pill");
+    if (!b) return;
+    browseFilterState[b.dataset.key] = b.dataset.value;
+    renderBrowse();
+  });
+  browseGrid.addEventListener("click", (e) => {
+    const b = e.target.closest(".cap-btn");
+    if (!b) return;
+    const it = searchItems.find((x) => x.type === "nas" && x.key === b.dataset.sku.toUpperCase());
+    if (!it) return;
+    modelInput.value = it.label;
+    suggestBox.hidden = true;
+    selectNas(it);
+    setBrowseOpen(false);
+    // パネルが閉じるアニメーション（0.3秒）でページの高さが変わるため、閉じ終わってから結果の位置へスクロールする
+    setTimeout(() => nasView.scrollIntoView({ behavior: "smooth", block: "start" }), 350);
+  });
 
   // ---------- LAN DISKから探す ----------
 
@@ -451,7 +562,16 @@
     return state.devices.reduce((s, d) => s + (Number(d.watt) || 0) * (d.count || 1), 0);
   }
   function updateTotal() {
-    el("#total-watt").textContent = Math.round(totalWatt());
+    const tw = el("#total-watt");
+    const next = String(Math.round(totalWatt()));
+    if (tw.textContent !== next) {
+      tw.textContent = next;
+      // 数字が変わったことが目で分かるよう、軽く弾ませる
+      const box = tw.parentElement;
+      box.classList.remove("load-total__value--pop");
+      void box.offsetWidth;
+      box.classList.add("load-total__value--pop");
+    }
     const parts = state.devices.map((x) => `${shortLabel(x)} ${fmt(Number(x.watt) || 0, 1)}W${x.count > 1 ? `×${x.count}台` : ""}`);
     el("#total-formula").textContent = `${parts.join(" ＋ ")} ＝ ${fmt(totalWatt(), 1)}W`;
     el("#plug-count").textContent = `UPSのコンセントに挿すプラグ：${plugCount()}本`;
@@ -549,6 +669,15 @@
   const sidebarTitle = el(".sidebar__title");
   if (window.matchMedia("(max-width: 860px)").matches) sidebar.classList.add("sidebar--collapsed");
   sidebarTitle.addEventListener("click", () => sidebar.classList.toggle("sidebar--collapsed"));
+  el("#filter-reset").addEventListener("click", () => {
+    sidebar.querySelectorAll('input[name="maker"], input[name="form"]').forEach((c) => { c.checked = true; });
+    el("#f-sine").checked = false;
+    el("#f-narsus").checked = false;
+    el("#f-100v").checked = true;
+    el("#f-untested").checked = false;
+    el("#f-discontinued").checked = false;
+    sidebar.dispatchEvent(new Event("change"));
+  });
   sidebar.addEventListener("change", () => {
     if (state.mode === "nas" && currentNas) renderUpsResults();
     if (state.mode === "ups") renderUpsView();
