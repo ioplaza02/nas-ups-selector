@@ -387,6 +387,24 @@ details > summary { color: var(--text-soft); font-weight: 700; }
 }
 .share-btn:hover { background: var(--accent); color: #fff; transform: translateY(-2px); box-shadow: 0 7px 16px rgba(47,111,208,.28); }
 .share-btn:active { transform: translateY(1px) scale(.98); }
+.plug-notice { display: flex; gap: 10px; align-items: flex-start; background: var(--bad-bg); border: 1px solid #efb9b3; border-radius: 12px; padding: 10px 12px; }
+.plug-face { width: 46px; height: 46px; flex-shrink: 0; }
+.plug-notice__text { min-width: 0; }
+.plug-notice__title { margin: 0; font-size: 13px; font-weight: 700; color: var(--bad); }
+.plug-notice__body { margin: 2px 0 0; font-size: 12px; color: var(--bad); line-height: 1.6; }
+.plug-notice__body strong { color: var(--bad); }
+.plug-notice__src { margin: 6px 0 0; display: flex; flex-direction: column; gap: 2px; font-size: 11px; }
+.plug-notice__src a { color: var(--bad); font-weight: 700; text-underline-offset: 3px; }
+.badge--plug { margin-left: 6px; background: var(--warn-bg); color: var(--warn); font-size: 10px; padding: 1px 7px; }
+.outlet-hint { margin-top: 12px; background: #fff8ec; border: 1px solid #f0d3a6; border-radius: 14px; padding: 14px 16px; animation: upUp .5s var(--ease) both; }
+.outlet-hint__title { margin: 0 0 4px; font-weight: 700; color: var(--warn); }
+.outlet-hint__body { margin: 0 0 10px; font-size: 13px; color: var(--text-soft); }
+.outlet-hint__btn {
+  font: inherit; font-size: 13px; font-weight: 700; color: #fff; border: none; border-radius: 999px; padding: 8px 16px; cursor: pointer;
+  background: linear-gradient(180deg, #d99a45, #b8741f); box-shadow: 0 3px 0 #8c5513; transition: transform .15s var(--ease), box-shadow .15s;
+}
+.outlet-hint__btn:hover { transform: translateY(-2px); box-shadow: 0 5px 0 #8c5513; }
+.outlet-hint__btn:active { transform: translateY(2px); box-shadow: 0 1px 0 #8c5513; }
 /* 公式対応表へのリンク（裏取り用） */
 .source-btn {
   display: inline-flex; align-items: center; padding: 8px 16px; border-radius: 999px; font-size: 12px; font-weight: 700;

@@ -1,5 +1,5 @@
 {
- "note": "UPSの仕様（出力容量・運転時間など）。各メーカーの公開資料をもとに手作業で整備（2026-10-16）。運転時間は新品・25℃前後の目安で、メーカー公表の負荷点。スクレイパーでは更新しない。 outletsは出力コンセントの口数（backup＝停電時も給電、surgeOnly＝雷サージ保護のみで停電時は給電されない）。2026-10-16に各メーカー資料等で確認。",
+ "note": "UPSの仕様（出力容量・運転時間など）。各メーカーの公開資料をもとに手作業で整備（2026-10-16）。運転時間は新品・25℃前後の目安で、メーカー公表の負荷点。スクレイパーでは更新しない。 outletsは出力コンセントの口数（backup＝停電時も給電、surgeOnly＝雷サージ保護のみで停電時は給電されない）。2026-10-16に各メーカー資料等で確認。 inputPlugは工場出荷時の入力プラグ（2026-10-20に各メーカー資料で確認。NEMA 5-15P＝一般的な壁のコンセント）。",
  "updatedAt": "2026-10-16",
  "seriesAliases": {
   "DL3115シリーズ": [
@@ -52,7 +52,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "SMT750J",
@@ -100,7 +101,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "SMT1000J",
@@ -156,7 +158,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "SMT1500J",
@@ -224,7 +227,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "SMT2200J",
@@ -276,7 +280,7 @@
      6
     ]
    ],
-   "caution": null,
+   "caution": "30A用の専用コンセント（NEMA L5-30P）が必要です。一般的な壁のコンセントには挿せません",
    "memo": null,
    "source": "https://download.se.com/files?p_Doc_Ref=SPD_SMT2200J_Spec_JA",
    "outlets": {
@@ -284,7 +288,19 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R×8、5-20R×2",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA L5-30P",
+   "inputPlugNote": "プラグを5-15Pに交換（電気工事士による作業）すると1200VA/1200Wまで",
+   "inputPlugSources": [
+    {
+     "label": "APC ユーザーマニュアル（7ページ「プラグタイプ」）",
+     "url": "https://download.se.com/files?p_enDocType=User+guide&p_File_Name=SU+UM+TME71927+MN01+JA.pdf&p_Doc_Ref=SPD_SU-UM-TME71927_JA"
+    },
+    {
+     "label": "APC「Smart-UPS 入力プラグと最大出力の関係」",
+     "url": "https://www.se.com/jp/ja/faqs/FA53094"
+    }
+   ]
   },
   {
    "model": "SMT3000J",
@@ -344,7 +360,7 @@
      5
     ]
    ],
-   "caution": "定格いっぱいまで使う場合は電気工事（ハードワイヤ接続）が必要です",
+   "caution": "30A用の専用コンセント（NEMA L5-30P）が必要です。一般的な壁のコンセントには挿せません",
    "memo": "3000VA/2700Wはハードワイヤ時。標準プラグ時2400VA/2400Wで登録",
    "source": "https://download.se.com/files?p_Doc_Ref=SPD_SMT3000J_Spec_JA",
    "outlets": {
@@ -352,7 +368,19 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R×8、5-20R×2",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA L5-30P",
+   "inputPlugNote": "端子台に直結（電気工事）すると3000VA/2700W",
+   "inputPlugSources": [
+    {
+     "label": "APC ユーザーマニュアル（7ページ「プラグタイプ」）",
+     "url": "https://download.se.com/files?p_enDocType=User+guide&p_File_Name=SU+UM+TME71927+MN01+JA.pdf&p_Doc_Ref=SPD_SU-UM-TME71927_JA"
+    },
+    {
+     "label": "APC「Smart-UPS 入力プラグと最大出力の関係」",
+     "url": "https://www.se.com/jp/ja/faqs/FA53094"
+    }
+   ]
   },
   {
    "model": "SMT1K2RJ1U",
@@ -416,7 +444,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "SMT750RMJ1U",
@@ -476,7 +505,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "SMT1200RMJ1U",
@@ -540,7 +570,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "SMT1500RMJ2U",
@@ -604,7 +635,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "SMT3000RMJ2U",
@@ -664,7 +696,7 @@
      3
     ]
    ],
-   "caution": "定格いっぱいまで使う場合は電気工事（ハードワイヤ接続）が必要です",
+   "caution": "30A用の専用コンセント（NEMA L5-30P）が必要です。一般的な壁のコンセントには挿せません",
    "memo": "3000VA/2700Wはハードワイヤ時。標準プラグ時2400VA/2400Wで登録",
    "source": "https://download.se.com/files?p_Doc_Ref=SPD_SMT3000RMJ2U_Spec_JA",
    "outlets": {
@@ -672,7 +704,15 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R×6、5-20R×2",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA L5-30P",
+   "inputPlugNote": "端子台に直結（電気工事）すると3000VA/2700W",
+   "inputPlugSources": [
+    {
+     "label": "APC「単相100V UPSの一覧」（入力プラグ欄）",
+     "url": "https://www.se.com/jp/ja/faqs/FAQ000240766"
+    }
+   ]
   },
   {
    "model": "SCL400RMJ1U",
@@ -724,7 +764,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "SUA750RMJ1UB",
@@ -776,7 +817,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": "口数は海外販売店の値"
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BR400G-JP",
@@ -832,7 +874,8 @@
     "surgeOnly": 3,
     "type": null,
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BR550G-JP",
@@ -900,7 +943,8 @@
     "surgeOnly": 3,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BR1000G-JP",
@@ -964,7 +1008,8 @@
     "surgeOnly": 4,
     "type": null,
     "note": "内訳は販売店カタログからの推定"
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BR1200G-JP",
@@ -1036,7 +1081,8 @@
     "surgeOnly": 5,
     "type": null,
     "note": "内訳は販売店カタログからの推定"
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BR400S-JP",
@@ -1088,7 +1134,8 @@
     "surgeOnly": 3,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BR550S-JP",
@@ -1152,7 +1199,8 @@
     "surgeOnly": 3,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BR1000S-JP",
@@ -1216,7 +1264,8 @@
     "surgeOnly": 4,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BR1200S-JP",
@@ -1288,7 +1337,8 @@
     "surgeOnly": 4,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BG500-JP",
@@ -1348,7 +1398,8 @@
     "surgeOnly": null,
     "type": null,
     "note": "合計4口（停電時に給電される口の内訳は未確認）"
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BE550G-JP",
@@ -1416,7 +1467,8 @@
     "surgeOnly": 4,
     "type": null,
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BE750G-JP",
@@ -1500,7 +1552,8 @@
     "surgeOnly": 5,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BE550M1-JP",
@@ -1564,7 +1617,8 @@
     "surgeOnly": 3,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BE750M2-JP",
@@ -1648,7 +1702,8 @@
     "surgeOnly": 3,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BL50T",
@@ -1700,7 +1755,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BL75T",
@@ -1760,7 +1816,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BL100T",
@@ -1828,7 +1885,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": "形状は公式資料間で記載ゆれあり"
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BW40T",
@@ -1872,7 +1930,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BW55T",
@@ -1920,7 +1979,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BW100T",
@@ -1980,7 +2040,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BW120T",
@@ -2044,7 +2105,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BY35S",
@@ -2088,7 +2150,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BY50S",
@@ -2132,7 +2195,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BY80S",
@@ -2184,7 +2248,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BY120S",
@@ -2248,7 +2313,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BY50FW",
@@ -2292,7 +2358,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BY75SW",
@@ -2344,7 +2411,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BN50T",
@@ -2396,7 +2464,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BN75T",
@@ -2456,7 +2525,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BN100T",
@@ -2524,7 +2594,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BN150T",
@@ -2600,7 +2671,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BN220T",
@@ -2704,7 +2776,7 @@
      7
     ]
    ],
-   "caution": null,
+   "caution": "30A用の専用コンセント（NEMA L5-30P）が必要です。一般的な壁のコンセントには挿せません",
    "memo": null,
    "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
    "outlets": {
@@ -2712,7 +2784,15 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R×8、5-20R×2",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA L5-30P",
+   "inputPlugNote": "5-15Pプラグに交換すると1095W、20Aプラグなら1520Wまで（交換後は本体の設定変更が必要）",
+   "inputPlugSources": [
+    {
+     "label": "オムロン BN-Tシリーズ 仕様（入力プラグ形状）",
+     "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/bn50-300t/bn50-300t_spec.html"
+    }
+   ]
   },
   {
    "model": "BN300T",
@@ -2828,7 +2908,7 @@
      5.8
     ]
    ],
-   "caution": "30A用の専用コンセントが必要です",
+   "caution": "30A用の専用コンセント（NEMA L5-30P）が必要です。一般的な壁のコンセントには挿せません",
    "memo": "工場出荷時2370VA/2370W（30Aプラグ）",
    "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
    "outlets": {
@@ -2836,7 +2916,15 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R×8、5-20R×2",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA L5-30P",
+   "inputPlugNote": "5-20Pプラグに交換すると1520Wまで",
+   "inputPlugSources": [
+    {
+     "label": "オムロン BN-Tシリーズ 仕様（入力プラグ形状）",
+     "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/bn50-300t/bn50-300t_spec.html"
+    }
+   ]
   },
   {
    "model": "BN75R",
@@ -2896,7 +2984,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BN150R",
@@ -2972,7 +3061,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BN300R",
@@ -3088,7 +3178,7 @@
      2.7
     ]
    ],
-   "caution": "30A用の専用コンセントが必要です",
+   "caution": "30A用の専用コンセント（NEMA L5-30P）が必要です。一般的な壁のコンセントには挿せません",
    "memo": "2024年9月生産終了",
    "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
    "outlets": {
@@ -3096,7 +3186,14 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R×6、5-20R×2",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA L5-30P",
+   "inputPlugSources": [
+    {
+     "label": "オムロン BN-Rシリーズ",
+     "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/bn150-300r/bn150-300r.html"
+    }
+   ]
   },
   {
    "model": "BN150RA",
@@ -3180,7 +3277,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BN300RA",
@@ -3304,7 +3402,7 @@
      3.6
     ]
    ],
-   "caution": "専用コンセントが必要です",
+   "caution": "30A用の専用コンセント（NEMA L5-30P）が必要です。一般的な壁のコンセントには挿せません",
    "memo": "100Vモード値",
    "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
    "outlets": {
@@ -3312,7 +3410,14 @@
     "surgeOnly": 0,
     "type": "NEMA 5-20R×6、L5-30R×1",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA L5-30P",
+   "inputPlugSources": [
+    {
+     "label": "オムロン BN-RAシリーズ 仕様（入力プラグ形状）",
+     "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/bn150-300ra/bn150-300ra_spec.html"
+    }
+   ]
   },
   {
    "model": "BV55RE",
@@ -3360,7 +3465,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BV55REM",
@@ -3408,7 +3514,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BU75RW",
@@ -3464,7 +3571,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BU100RW",
@@ -3528,7 +3636,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BU200RW",
@@ -3592,7 +3701,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-20R（15Aプラグも可）",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BU300RW",
@@ -3692,7 +3802,7 @@
      5.6
     ]
    ],
-   "caution": "専用コンセントが必要です",
+   "caution": "30A用の専用コンセント（NEMA L5-30P）が必要です。一般的な壁のコンセントには挿せません",
    "memo": "工場出荷時2400VA/1920W",
    "source": "https://socialsolution.omron.com/jp/ja/products_service/ups/support/backup.pdf",
    "outlets": {
@@ -3700,7 +3810,14 @@
     "surgeOnly": 0,
     "type": "NEMA 5-20R（15Aプラグも可）",
     "note": "形状は要確認"
-   }
+   },
+   "inputPlug": "NEMA L5-30P",
+   "inputPlugSources": [
+    {
+     "label": "オムロン BU-RWシリーズ 仕様（入力プラグ形状）",
+     "url": "https://socialsolution.omron.com/jp/ja/products_service/ups/product/bu75-300rw/bu75-300rw_spec.html"
+    }
+   ]
   },
   {
    "model": "BX35F",
@@ -3744,7 +3861,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BX50F",
@@ -3788,7 +3906,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BZ35LT2",
@@ -3832,7 +3951,8 @@
     "surgeOnly": 3,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "BZ50LT2",
@@ -3876,7 +3996,8 @@
     "surgeOnly": 3,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "MSP501TX1AS1C-JPN",
@@ -3920,7 +4041,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "MSP751TX1AS1C-JPN",
@@ -3964,7 +4086,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "MSP102TX1AS1C-JPN",
@@ -4024,7 +4147,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "PET501J1CA",
@@ -4068,7 +4192,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "PET751J1CA",
@@ -4120,7 +4245,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "PET102J1CA",
@@ -4176,7 +4302,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "PEN102J1C",
@@ -4224,7 +4351,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "PEN102J1RT",
@@ -4272,7 +4400,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "PEN152J1RT/15",
@@ -4328,7 +4457,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "PEN152J1RT",
@@ -4388,7 +4518,14 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA L5-20P",
+   "inputPlugSources": [
+    {
+     "label": "メーカーの商品ページ（仕様）",
+     "url": "https://www.fujielectric.co.jp/products/power_supply/ups/product_detail/mini_ex100.html"
+    }
+   ]
   },
   {
    "model": "PEN302J1RT/30",
@@ -4460,7 +4597,14 @@
     "surgeOnly": 0,
     "type": "5-15R×2、5-20R×2、L5-30R×1",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA L5-30P",
+   "inputPlugSources": [
+    {
+     "label": "メーカーの商品ページ（仕様）",
+     "url": "https://www.fujielectric.co.jp/products/power_supply/ups/product_detail/mini_ex100.html"
+    }
+   ]
   },
   {
    "model": "PEN302J1RT",
@@ -4536,7 +4680,14 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R＋出力端子台",
     "note": "主な出力は端子台（電気工事）"
-   }
+   },
+   "inputPlug": "端子台（電気工事）",
+   "inputPlugSources": [
+    {
+     "label": "メーカーの商品ページ（仕様）",
+     "url": "https://www.fujielectric.co.jp/products/power_supply/ups/product_detail/mini_ex100.html"
+    }
+   ]
   },
   {
    "model": "DL5115-500JL",
@@ -4588,7 +4739,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "DL5115-750JL",
@@ -4648,7 +4800,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "DL5115-1000JL",
@@ -4716,7 +4869,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "DL5115-1400JL",
@@ -4788,7 +4942,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "DL5115-1400JL-20",
@@ -4860,7 +5015,14 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-20P",
+   "inputPlugSources": [
+    {
+     "label": "メーカーの商品ページ（仕様）",
+     "url": "https://www.fujielectric.co.jp/products/power_supply/ups/product_detail/mini_dl5115.html"
+    }
+   ]
   },
   {
    "model": "DL3115-300JL",
@@ -4900,7 +5062,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "DL3115-420JL",
@@ -4944,7 +5107,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "DL3115-500JL",
@@ -4992,7 +5156,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "DL3115-650JL",
@@ -5048,7 +5213,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "5P750",
@@ -5092,7 +5258,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "5P750R",
@@ -5136,7 +5303,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "5P1000",
@@ -5184,7 +5352,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "5P1000R",
@@ -5232,7 +5401,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "5P1500",
@@ -5284,7 +5454,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "5P1550G",
@@ -5336,7 +5507,14 @@
     "surgeOnly": 0,
     "type": "IEC C13（200V系）",
     "note": null
-   }
+   },
+   "inputPlug": "200V用",
+   "inputPlugSources": [
+    {
+     "label": "メーカーの商品ページ（仕様）",
+     "url": "https://www.daitron.co.jp/eaton/products/eaton-5p-ups.html"
+    }
+   ]
   },
   {
    "model": "5P650i",
@@ -5376,7 +5554,14 @@
     "surgeOnly": 0,
     "type": "IEC C13（200V系）",
     "note": null
-   }
+   },
+   "inputPlug": "200V用",
+   "inputPlugSources": [
+    {
+     "label": "メーカーの商品ページ（仕様）",
+     "url": "https://www.daitron.co.jp/eaton/products/eaton-5p-ups.html"
+    }
+   ]
   },
   {
    "model": "5PX1000RT2U",
@@ -5404,7 +5589,8 @@
     "surgeOnly": 0,
     "type": null,
     "note": "口数は販売店の値"
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "5PX1500RT2U",
@@ -5456,7 +5642,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "5PX1500iRT2U",
@@ -5508,7 +5695,14 @@
     "surgeOnly": 0,
     "type": "IEC C13（200V系）",
     "note": null
-   }
+   },
+   "inputPlug": "200V用",
+   "inputPlugSources": [
+    {
+     "label": "メーカーの商品ページ（仕様）",
+     "url": "https://www.daitron.co.jp/eaton/products/eaton-5px-ups.html"
+    }
+   ]
   },
   {
    "model": "5PX3000RT2U",
@@ -5564,7 +5758,14 @@
     "surgeOnly": 0,
     "type": "NEMA 5-20R×6、L5-30R×1",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA L5-30P",
+   "inputPlugSources": [
+    {
+     "label": "メーカーの商品ページ（仕様）",
+     "url": "https://www.daitron.co.jp/eaton/products/eaton-5px-ups.html"
+    }
+   ]
   },
   {
    "model": "5PX3000iRT2U",
@@ -5620,7 +5821,14 @@
     "surgeOnly": 0,
     "type": "IEC C13×8、C19×1（200V系）",
     "note": null
-   }
+   },
+   "inputPlug": "200V用",
+   "inputPlugSources": [
+    {
+     "label": "メーカーの商品ページ（仕様）",
+     "url": "https://www.daitron.co.jp/eaton/products/eaton-5px-ups.html"
+    }
+   ]
   },
   {
    "model": "EX900TJ",
@@ -5660,7 +5868,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "EX1000T",
@@ -5700,7 +5909,14 @@
     "surgeOnly": 0,
     "type": "IEC C13（200V系）",
     "note": null
-   }
+   },
+   "inputPlug": "200V用",
+   "inputPlugSources": [
+    {
+     "label": "メーカーの商品ページ（仕様）",
+     "url": "https://www.daitron.co.jp/eaton/products/eaton-ex-ups.html"
+    }
+   ]
   },
   {
    "model": "EX1150TJ",
@@ -5744,7 +5960,8 @@
     "surgeOnly": 0,
     "type": "NEMA 5-15R",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA 5-15P"
   },
   {
    "model": "EX2400RT2UJ",
@@ -5792,7 +6009,14 @@
     "surgeOnly": 0,
     "type": "NEMA 5-20R×6、L5-30R×1",
     "note": null
-   }
+   },
+   "inputPlug": "NEMA L5-30P",
+   "inputPlugSources": [
+    {
+     "label": "メーカーの商品ページ（仕様）",
+     "url": "https://www.daitron.co.jp/eaton/products/eaton-ex-ups.html"
+    }
+   ]
   },
   {
    "model": "EX3000RT2UH",
@@ -5840,7 +6064,14 @@
     "surgeOnly": 0,
     "type": "IEC C13×8、C19×1（200V系）",
     "note": null
-   }
+   },
+   "inputPlug": "200V用",
+   "inputPlugSources": [
+    {
+     "label": "メーカーの商品ページ（仕様）",
+     "url": "https://www.daitron.co.jp/eaton/products/eaton-ex-ups.html"
+    }
+   ]
   }
  ]
 }

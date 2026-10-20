@@ -662,8 +662,14 @@
     return { level, load, rt, detail, plugs, backup, need, watt };
   }
 
+  // 一般的な壁のコンセント（100V・15A、NEMA 5-15R）に挿せないUPSか。
+  // 工場出荷時の入力プラグ（data/ups-specs.json の inputPlug）で判定する。
+  // （2026-10-20修正：以前は注意書きの文言から推測していたため、L5-30Pプラグの SMT2200J・BN220T を
+  //   「一般的なコンセントで使える」側に出してしまっていた）
   function needsSpecialOutlet(sp) {
-    return !!(sp && sp.caution && /(200V|専用コンセント|電気工事)/.test(sp.caution));
+    if (!sp) return false;
+    if (sp.inputPlug) return sp.inputPlug !== "NEMA 5-15P";
+    return !!(sp.caution && /(200V|専用コンセント|電気工事)/.test(sp.caution));
   }
 
   // ---------- 絞り込み ----------
@@ -677,7 +683,7 @@
     sidebar.querySelectorAll('input[name="maker"], input[name="form"]').forEach((c) => { c.checked = true; });
     el("#f-sine").checked = false;
     el("#f-narsus").checked = false;
-    el("#f-100v").checked = true;
+    el("#f-100v").checked = false;
     el("#f-untested").checked = false;
     el("#f-discontinued").checked = false;
     sidebar.dispatchEvent(new Event("change"));
@@ -749,6 +755,12 @@
     });
     visible.forEach((r) => { r.j = judge(r.spec, watt, need); });
 
+    // 「一般的なコンセント」の条件だけで外れたUPSのうち、条件を満たすもの（案内に使う）
+    const outletOnly = f.only100v ? all.filter((r) => r.status === "ok" && needsSpecialOutlet(r.spec) &&
+      f.makers.includes(r.maker) && formMatches(r.spec, f.forms) && (f.discontinued || r.spec.salesStatus !== "販売終了") &&
+      (!f.sine || (/正弦波/.test(r.spec.waveform || "") && !/近似|疑似/.test(r.spec.waveform || ""))) && (!f.narsus || r.narsus))
+      .filter((r) => ["good", "tight"].includes(judge(r.spec, watt, need).level)) : [];
+
     const ok = visible.filter((r) => r.status === "ok");
     const fits = ok.filter((r) => r.j.level === "good" || r.j.level === "tight")
       .sort((a, b) => (a.j.level === "good" ? 0 : 1) - (b.j.level === "good" ? 0 : 1) || a.spec.watt - b.spec.watt);
@@ -779,7 +791,13 @@
       <h4 class="result-group__title result-group__title--good">おすすめ：停電時に${need}分以上もつUPS<span>合計 約${Math.round(watt)}Wの場合／メーカーごとに、条件を満たすいちばん小さい容量を表示</span></h4>`;
     html += fits.length
       ? `<div class="ups-grid">${picks.map((r) => upsCard(r, bestKeys.has(r.maker + "|" + r.model))).join("")}</div>`
-      : `<div class="no-match">条件に合うUPSがありません。つなぐ機器を減らすか、左の絞り込み条件（メーカー・設置方法・コンセント）をゆるめてみてください。</div>`;
+      : `<div class="no-match">一般的なコンセントで使えるUPSの中には、条件に合うものがありません。つなぐ機器を減らすか、左の絞り込み条件をゆるめてみてください。</div>`;
+    if (outletOnly.length) {
+      html += `<div class="outlet-hint"><p class="outlet-hint__title">専用コンセントを用意できる場合は、さらに ${outletOnly.length}機種が条件を満たします</p>
+        <p class="outlet-hint__body">${outletOnly.map((r) => `<span class="mono">${esc(r.model)}</span>`).join("、")}（${esc([...new Set(outletOnly.map((r) => r.spec.inputPlug))].join("・"))}などのプラグ）。
+        容量の大きいUPSは、一般的な壁のコンセントに挿せない形のプラグになっています。設置場所に専用コンセントがあるか、電気工事ができるかを確認のうえ、左の「一般的なコンセント（100V・15A）で使える」のチェックを外すと表示されます。</p>
+        <button type="button" class="outlet-hint__btn" id="outlet-hint-btn">専用コンセントが必要なUPSも表示する</button></div>`;
+    }
     html += `</section>`;
     if (others.length) {
       html += `<details class="result-group result-group--fold">
@@ -806,6 +824,8 @@
         <ul class="ng-list">${ng.map((r) => `<li><span class="mono">${esc(r.model)}</span>　${esc(r.spec ? r.spec.name : r.label)}</li>`).join("")}</ul></details>`;
     }
     el("#ups-results").innerHTML = html;
+    const hb = el("#outlet-hint-btn");
+    if (hb) hb.addEventListener("click", () => { el("#f-100v").checked = false; renderUpsResults(); });
     renderPrintHeader(fits);
   }
 
@@ -850,10 +870,12 @@
         <div><dt>設置</dt><dd>${FORM_LABEL[sp.form] || "－"}${sp.rackU ? `（${sp.rackU}U）` : ""}</dd></div>
         <div><dt>給電方式</dt><dd>${esc(sp.topology || "－")}</dd></div>
         <div><dt>停電時の波形</dt><dd>${esc(sp.waveform || "－")}</dd></div>
+        <div class="spec-list__full"><dt>入力プラグ（壁側）</dt><dd>${plugText(sp)}</dd></div>
         <div class="spec-list__full"><dt>コンセント</dt><dd>${outletText(sp)}</dd></div>
       </dl>` : `<p class="ups-card__nospec">このUPSの容量データがないため、運転時間は計算していません。</p>`}
       ${sp && sp.outlets && sp.outlets.surgeOnly ? `<p class="ups-card__caution">⚠ ${sp.outlets.backup + sp.outlets.surgeOnly}口のうち${sp.outlets.surgeOnly}口は「雷サージ保護のみ」で、停電時は電気が来ません。LAN DISKは必ず「バッテリーバックアップ」側の口に挿してください。</p>` : ""}
-      ${sp && sp.caution ? `<p class="ups-card__caution">⚠ ${esc(sp.caution)}</p>` : ""}
+      ${sp ? plugNoticeHtml(sp) : ""}
+      ${sp && sp.caution && !isPlugCaution(sp) ? `<p class="ups-card__caution">⚠ ${esc(sp.caution)}</p>` : ""}
       ${sp && j.detail ? calcHtml(r, j) : ""}
       ${notesHtml ? `<details class="ups-card__notes"><summary>公式対応表の注記</summary><ul>${notesHtml}</ul></details>` : ""}
       ${verifyHtml(r)}
@@ -869,6 +891,52 @@
     if (id.startsWith("hub")) return "ハブ";
     if (id === "router") return "ルーター";
     return (d.label || "その他").slice(0, 10);
+  }
+
+  // 専用コンセントが必要なUPSの赤い注意書き（当社で動作確認済みの組み合わせなので結果には出し、設置条件だけ目立たせる）
+  function isPlugCaution(sp) {
+    return needsSpecialOutlet(sp) && /(30A|20A|専用コンセント|200V|電気工事|端子台)/.test(sp.caution || "");
+  }
+  function plugFace(plug) {
+    // 壁側から見たプラグの差し込み口の略図（形の違いが一目で分かる程度の簡単な図）
+    if (/L5-30P/.test(plug)) {
+      return `<svg viewBox="0 0 60 60" class="plug-face" aria-hidden="true"><circle cx="30" cy="30" r="27" fill="#2b2f36"/><circle cx="30" cy="30" r="27" fill="none" stroke="#9aa0a8" stroke-width="2"/>
+        <path d="M14 22 A18 18 0 0 1 24 13" stroke="#e8c36a" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <path d="M36 13 A18 18 0 0 1 46 22" stroke="#e8c36a" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <path d="M24 47 A18 18 0 0 0 36 47" stroke="#cfd5de" stroke-width="5" fill="none" stroke-linecap="round"/></svg>`;
+    }
+    if (/5-20P|L5-20P/.test(plug)) {
+      return `<svg viewBox="0 0 60 60" class="plug-face" aria-hidden="true"><rect x="5" y="5" width="50" height="50" rx="12" fill="#2b2f36"/>
+        <rect x="16" y="15" width="5" height="18" rx="1" fill="#e8c36a"/><rect x="33" y="22" width="15" height="5" rx="1" fill="#e8c36a"/><circle cx="30" cy="44" r="4" fill="#cfd5de"/></svg>`;
+    }
+    if (/200V/.test(plug)) {
+      return `<svg viewBox="0 0 60 60" class="plug-face" aria-hidden="true"><rect x="5" y="5" width="50" height="50" rx="12" fill="#2b2f36"/><text x="30" y="36" font-size="15" text-anchor="middle" fill="#e8c36a" font-weight="700">200V</text></svg>`;
+    }
+    return `<svg viewBox="0 0 60 60" class="plug-face" aria-hidden="true"><rect x="5" y="5" width="50" height="50" rx="12" fill="#2b2f36"/><text x="30" y="36" font-size="12" text-anchor="middle" fill="#e8c36a" font-weight="700">端子台</text></svg>`;
+  }
+  function plugNoticeHtml(sp) {
+    if (!needsSpecialOutlet(sp)) return "";
+    const plug = sp.inputPlug || "";
+    const what = /L5-30P/.test(plug) ? "30A用の、差し込んでひねって固定する業務用の丸い形です。"
+      : /20P/.test(plug) ? "20A用の形です。"
+      : /200V/.test(plug) ? "200V電源用です。"
+      : "壁のコンセントではなく、配線を直接つなぐ方式です。";
+    const srcs = (sp.inputPlugSources || []).map((x) => `<a href="${escAttr(x.url)}" target="_blank" rel="noopener noreferrer">${esc(x.label)} ↗</a>`).join("");
+    return `<div class="plug-notice">
+      ${plugFace(plug)}
+      <div class="plug-notice__text">
+        <p class="plug-notice__title">⚠ 入力プラグは「${esc(plug)}」です</p>
+        <p class="plug-notice__body">${what}一般的な壁のコンセント（100V・15A）には挿せません。設置場所に<strong>専用コンセント（電気工事）</strong>が必要です。${sp.inputPlugNote ? `<br>${esc(sp.inputPlugNote)}。` : ""}</p>
+        ${srcs ? `<p class="plug-notice__src">${srcs}</p>` : ""}
+      </div>
+    </div>`;
+  }
+
+  function plugText(sp) {
+    if (!sp.inputPlug) return "－";
+    const ordinary = sp.inputPlug === "NEMA 5-15P";
+    return `${esc(sp.inputPlug)}${ordinary ? "（一般的なコンセントに挿せます）" : `<span class="badge badge--plug">専用コンセントが必要</span>`}` +
+      (sp.inputPlugNote ? `<span class="spec-list__sub">${esc(sp.inputPlugNote)}</span>` : "");
   }
 
   function outletText(sp) {
@@ -1065,11 +1133,13 @@
         <div><dt>設置</dt><dd>${FORM_LABEL[sp.form] || "－"}${sp.rackU ? `（${sp.rackU}U）` : ""}</dd></div>
         <div><dt>給電方式</dt><dd>${esc(sp.topology || "－")}</dd></div>
         <div><dt>停電時の波形</dt><dd>${esc(sp.waveform || "－")}</dd></div>
+        <div class="spec-list__full"><dt>入力プラグ（壁側）</dt><dd>${plugText(sp)}</dd></div>
         <div><dt>コンセント</dt><dd>${outletText(sp)}</dd></div>
         <div><dt>100W使用時の目安</dt><dd>約${formatMin(runtimeAt(sp, 100))}</dd></div>
         <div><dt>200W使用時の目安</dt><dd>${sp.watt >= 200 ? "約" + formatMin(runtimeAt(sp, 200)) : "容量オーバー"}</dd></div>
       </dl>
-      ${sp.caution ? `<p class="ups-card__caution">⚠ ${esc(sp.caution)}</p>` : ""}
+      ${plugNoticeHtml(sp)}
+      ${sp.caution && !isPlugCaution(sp) ? `<p class="ups-card__caution">⚠ ${esc(sp.caution)}</p>` : ""}
       ${sp.url ? `<a class="ups-card__link" href="${escAttr(sp.url)}" target="_blank" rel="noopener noreferrer">メーカーの商品ページ ↗</a>` : ""}`
       : `<h2 class="ups-info__model">${esc(model)}</h2>`;
 
