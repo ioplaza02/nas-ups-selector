@@ -719,7 +719,7 @@
         const prev = map.get(key);
         if (!prev) {
           map.set(key, { model, tableModel: e.model, label: e.label, maker: e.maker, block: e.block, status: e.status,
-            narsus: e.narsus, notes: new Set(e.notes), osLabel: e.osLabel });
+            narsus: e.narsus, notes: new Set(e.notes), osLabel: e.osLabel, osGeneration: e.osGeneration });
         } else {
           if (STATUS_RANK[e.status] > STATUS_RANK[prev.status]) prev.status = e.status;
           prev.narsus = prev.narsus || e.narsus;
@@ -856,6 +856,7 @@
       ${sp && sp.caution ? `<p class="ups-card__caution">⚠ ${esc(sp.caution)}</p>` : ""}
       ${sp && j.detail ? calcHtml(r, j) : ""}
       ${notesHtml ? `<details class="ups-card__notes"><summary>公式対応表の注記</summary><ul>${notesHtml}</ul></details>` : ""}
+      ${verifyHtml(r)}
       ${sp && sp.url ? `<a class="ups-card__link" href="${escAttr(sp.url)}" target="_blank" rel="noopener noreferrer">メーカーの商品ページ ↗</a>` : ""}
     </article>`;
   }
@@ -914,6 +915,22 @@
       </ol>
       <p class="calc__note">k は「消費電力が増えると、もつ時間がどれだけ縮むか」の度合いです。k＝1なら消費電力が2倍で時間は半分、k が1より大きいと半分より短くなります（バッテリーは大きな電流を流すほど効率が落ちるため）。</p>
     </details>`;
+  }
+
+  // 公式対応表での位置（社内の方が、実際に表に載っていることを目で確かめられるように）
+  const SOURCE_PAGE = "https://www.iodata.jp/pio/io/nas/landisk/ups.htm";
+  const BLOCK_LABEL = { apc: "シュナイダーエレクトリック（APC）", omron: "OMRON", fuji: "富士電機", eaton: "EATON" };
+  function verifyHtml(r) {
+    const b = compat.blocks.find((x) => x.id === r.block);
+    const osPart = b && b.os === "linux" ? "Linuxベース オリジナルOSモデル" : "Windows Storage Server 搭載モデル";
+    const path = [osPart, `${BLOCK_LABEL[r.maker]}`, r.osGeneration].filter(Boolean).map(esc).join(" ＞ ");
+    const col = currentNas ? currentNas.code : "";
+    return `<div class="verify">
+      <p class="verify__title">公式対応表での位置</p>
+      <p class="verify__path">${path}</p>
+      <p class="verify__cell">「<span class="mono">${esc(r.tableModel || r.model)}</span>」の行 × 「<span class="mono">${esc(col)}</span>」の列 → <strong>${esc({ ok: "◯", checking: "確認中", untested: "－", ng: "×" }[r.status])}</strong></p>
+      <a class="verify__link" href="${SOURCE_PAGE}#${escAttr(r.block)}" target="_blank" rel="noopener noreferrer">公式対応表のこのメーカー欄を開く ↗</a>
+    </div>`;
   }
 
   function formatMin(m) {

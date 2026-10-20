@@ -51,6 +51,14 @@ const ROW_LABEL_ALIASES = {
 
 // ---------- 小さな道具 ----------
 
+// 公式ページのリンクは「/product/nas/...」のようなサイト内の書き方になっているため、
+// 必ず完全なURL（https://www.iodata.jp/...）に直してから使う。
+// （2026-10-20修正：これを忘れていて、NASの仕様ページが取れず消費電力が7シリーズ分しか入っていなかった。
+//   ブラウザで保存したHTMLでは完全なURLに変わっていたため、手元の試験では気づけなかった）
+function absUrl(href) {
+  try { return new URL(href, SOURCE_URL).href; } catch (e) { return href; }
+}
+
 function decodeEntities(s) {
   return s
     .replace(/&nbsp;/g, " ")
@@ -108,7 +116,7 @@ function parseTable(tableHtml) {
       const links = [];
       const aRe = /<a\b[^>]*href\s*=\s*["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi;
       let a;
-      while ((a = aRe.exec(inner))) links.push({ href: a[1], text: stripTags(a[2]) });
+      while ((a = aRe.exec(inner))) links.push({ href: absUrl(decodeEntities(a[1])), text: stripTags(a[2]) });
       cells.push({
         rowspan: parseInt(attr(c[2], "rowspan") || "1", 10) || 1,
         colspan: parseInt(attr(c[2], "colspan") || "1", 10) || 1,
@@ -289,7 +297,7 @@ function parseNotes(blockHtml) {
     const links = [];
     const aRe = /<a\b[^>]*href\s*=\s*["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi;
     let a;
-    while ((a = aRe.exec(body))) links.push({ href: a[1], text: stripTags(a[2]) });
+    while ((a = aRe.exec(body))) links.push({ href: absUrl(decodeEntities(a[1])), text: stripTags(a[2]) });
     const note = { text: stripTags(body), links };
     const num = mark.match(/※\s*(\d+)/);
     if (num) numbered[num[1]] = note;
@@ -371,7 +379,8 @@ export function parsePower(html) {
 }
 
 function specUrlOf(productUrl) {
-  return productUrl.replace(/index\.html?$/i, "").replace(/\/?$/, "/") + "spec.htm";
+  // 公式ページには「.../index.htm/」のような書き間違いもあるので、末尾の index.htm(/) を取り除いてから付ける
+  return absUrl(productUrl).replace(/index\.html?\/?$/i, "").replace(/\/?$/, "/") + "spec.htm";
 }
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -389,7 +398,7 @@ async function collectNasPower(entries, previous) {
   let fetched = 0;
   for (const [code, url] of byCode) {
     if (!url) continue;
-    if (!fullRefresh && prev[code] && prev[code].maxW != null) {
+    if (!fullRefresh && prev[code] && prev[code].maxW != null && /^https?:/.test(prev[code].specUrl || "")) {
       result[code] = prev[code];
       continue;
     }
@@ -408,7 +417,7 @@ async function collectNasPower(entries, previous) {
     }
     const power = cacheByUrl.get(specUrl);
     if (power) result[code] = { maxW: power.maxW, typW: power.typW, specUrl };
-    else if (prev[code]) result[code] = prev[code];
+    else if (prev[code]) result[code] = { ...prev[code], specUrl };
     else result[code] = { maxW: null, typW: null, specUrl };
   }
   console.log(`消費電力: 仕様ページを${fetched}件取得（全${byCode.size}シリーズ${fullRefresh ? "、週1回の全件取り直し" : ""}）`);
