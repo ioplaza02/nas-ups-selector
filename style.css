@@ -599,3 +599,35 @@ details > summary { color: var(--text-soft); font-weight: 700; }
   .setup-maker__more-inner { opacity: 1 !important; }
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
+
+/* ---------- ヘッダー：【社内限定】とお問い合わせ先（ポータル・ISSセレクターと同じ表記） ---------- */
+.brand-banner__internal {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: .02em;
+  line-height: 1;
+  color: #f6c453;
+  white-space: nowrap;
+  text-shadow: 0 2px 8px rgba(0,0,0,.35);
+}
+.brand-banner__contact {
+  margin: 0 0 10px auto;
+  width: fit-content;
+  padding: 5px 16px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #fff;
+  white-space: nowrap;
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 720px) {
+  .brand-banner__left { flex-wrap: wrap; row-gap: 10px; }
+  .brand-banner__internal { font-size: 17px; }
+  .brand-banner__contact { margin: 0 0 10px; font-size: 12px; }
+}
+@media print { .brand-banner__internal, .brand-banner__contact { display: none; } }
