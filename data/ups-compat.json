@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-21T21:26:19.769Z",
+ "updatedAt": "2026-10-22T21:21:04.597Z",
  "sourceUrl": "https://www.iodata.jp/pio/io/nas/landisk/ups.htm",
  "sourceDate": "2026年8月21日",
  "linuxNotice": "ランディスクとUPSは、USB接続のみ検証しております。",
@@ -160,10 +160,6 @@
     },
     "11": {
      "text": "Master Agentは非対応。",
-     "links": []
-    },
-    "12": {
-     "text": "NarSuS通知未対応。",
      "links": []
     }
    }
@@ -20645,7 +20641,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -20661,7 +20657,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -20677,7 +20673,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -20693,7 +20689,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -20709,7 +20705,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -20725,7 +20721,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -20741,7 +20737,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -20757,7 +20753,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -20773,7 +20769,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -20789,7 +20785,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -20805,7 +20801,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -20821,7 +20817,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -20837,7 +20833,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -20853,7 +20849,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -20869,7 +20865,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -20885,7 +20881,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -20901,7 +20897,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -20917,7 +20913,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -20933,7 +20929,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -20949,7 +20945,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -20965,7 +20961,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -20981,7 +20977,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -20997,7 +20993,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -21013,7 +21009,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -21029,7 +21025,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -21045,7 +21041,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -21061,7 +21057,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -21077,7 +21073,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -21093,7 +21089,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -21109,7 +21105,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -21125,7 +21121,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -21141,7 +21137,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -21157,7 +21153,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -21173,7 +21169,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -21189,7 +21185,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -21205,7 +21201,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -21221,7 +21217,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -21237,7 +21233,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -21253,7 +21249,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -21269,7 +21265,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -21285,7 +21281,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -21301,7 +21297,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -21317,7 +21313,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -21333,7 +21329,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -21349,7 +21345,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -21365,7 +21361,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -21381,7 +21377,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -21397,7 +21393,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -27077,7 +27073,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -27093,7 +27089,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -27109,7 +27105,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -27125,7 +27121,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -27141,7 +27137,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -27157,7 +27153,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -27173,7 +27169,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -27189,7 +27185,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -27205,7 +27201,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -27221,7 +27217,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -27237,7 +27233,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -27253,7 +27249,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -27269,7 +27265,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -27285,7 +27281,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -27301,7 +27297,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -27317,7 +27313,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -28358,9 +28354,7 @@
    "label": "PowerAttendant Standard Edition",
    "status": "ok",
    "narsus": false,
-   "notes": [
-    "12"
-   ]
+   "notes": []
   },
   {
    "block": "wssOMRON",
@@ -28376,9 +28370,7 @@
    "label": "PowerAttendant Standard Edition",
    "status": "ok",
    "narsus": false,
-   "notes": [
-    "12"
-   ]
+   "notes": []
   },
   {
    "block": "wssOMRON",
@@ -28394,9 +28386,7 @@
    "label": "PowerAttendant Standard Edition",
    "status": "ok",
    "narsus": false,
-   "notes": [
-    "12"
-   ]
+   "notes": []
   },
   {
    "block": "wssOMRON",
@@ -28412,9 +28402,7 @@
    "label": "PowerAttendant Standard Edition",
    "status": "ok",
    "narsus": false,
-   "notes": [
-    "12"
-   ]
+   "notes": []
   },
   {
    "block": "wssOMRON",
@@ -28430,9 +28418,7 @@
    "label": "PowerAttendant Standard Edition",
    "status": "ok",
    "narsus": false,
-   "notes": [
-    "12"
-   ]
+   "notes": []
   },
   {
    "block": "wssOMRON",
@@ -28448,9 +28434,7 @@
    "label": "PowerAttendant Standard Edition",
    "status": "ok",
    "narsus": false,
-   "notes": [
-    "12"
-   ]
+   "notes": []
   },
   {
    "block": "wssOMRON",
@@ -28466,9 +28450,7 @@
    "label": "PowerAttendant Standard Edition",
    "status": "ok",
    "narsus": false,
-   "notes": [
-    "12"
-   ]
+   "notes": []
   },
   {
    "block": "wssOMRON",
@@ -28484,9 +28466,7 @@
    "label": "PowerAttendant Standard Edition",
    "status": "ok",
    "narsus": false,
-   "notes": [
-    "12"
-   ]
+   "notes": []
   },
   {
    "block": "wssOMRON",
@@ -28502,9 +28482,7 @@
    "label": "PowerAttendant Standard Edition",
    "status": "ok",
    "narsus": false,
-   "notes": [
-    "12"
-   ]
+   "notes": []
   },
   {
    "block": "wssOMRON",
@@ -28520,9 +28498,7 @@
    "label": "PowerAttendant Standard Edition",
    "status": "ok",
    "narsus": false,
-   "notes": [
-    "12"
-   ]
+   "notes": []
   },
   {
    "block": "wssOMRON",
@@ -28538,9 +28514,7 @@
    "label": "PowerAttendant Standard Edition",
    "status": "ok",
    "narsus": false,
-   "notes": [
-    "12"
-   ]
+   "notes": []
   },
   {
    "block": "wssOMRON",
@@ -28556,9 +28530,7 @@
    "label": "PowerAttendant Standard Edition",
    "status": "ok",
    "narsus": false,
-   "notes": [
-    "12"
-   ]
+   "notes": []
   },
   {
    "block": "wssOMRON",
@@ -28574,9 +28546,7 @@
    "label": "PowerAttendant Standard Edition",
    "status": "ok",
    "narsus": false,
-   "notes": [
-    "12"
-   ]
+   "notes": []
   },
   {
    "block": "wssOMRON",
@@ -28592,9 +28562,7 @@
    "label": "PowerAttendant Standard Edition",
    "status": "ok",
    "narsus": false,
-   "notes": [
-    "12"
-   ]
+   "notes": []
   },
   {
    "block": "wssOMRON",
@@ -28610,9 +28578,7 @@
    "label": "PowerAttendant Standard Edition",
    "status": "ok",
    "narsus": false,
-   "notes": [
-    "12"
-   ]
+   "notes": []
   },
   {
    "block": "wssOMRON",
@@ -28628,9 +28594,7 @@
    "label": "PowerAttendant Standard Edition",
    "status": "ok",
    "narsus": false,
-   "notes": [
-    "12"
-   ]
+   "notes": []
   },
   {
    "block": "wssOMRON",
@@ -28901,7 +28865,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -28917,7 +28881,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -28933,7 +28897,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -28949,7 +28913,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -28965,7 +28929,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -28981,7 +28945,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -28997,7 +28961,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29013,7 +28977,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29029,7 +28993,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29045,7 +29009,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29061,7 +29025,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29077,7 +29041,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29093,7 +29057,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29109,7 +29073,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29125,7 +29089,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29141,7 +29105,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29157,7 +29121,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29173,7 +29137,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29189,7 +29153,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29205,7 +29169,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29221,7 +29185,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29237,7 +29201,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29253,7 +29217,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29269,7 +29233,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29285,7 +29249,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29301,7 +29265,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29317,7 +29281,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29333,7 +29297,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29349,7 +29313,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29365,7 +29329,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29381,7 +29345,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29397,7 +29361,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29413,7 +29377,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29429,7 +29393,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29445,7 +29409,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29461,7 +29425,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29477,7 +29441,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29493,7 +29457,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29509,7 +29473,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29525,7 +29489,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29541,7 +29505,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29557,7 +29521,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29573,7 +29537,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29589,7 +29553,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29605,7 +29569,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29621,7 +29585,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29637,7 +29601,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29653,7 +29617,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29669,7 +29633,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29685,7 +29649,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29701,7 +29665,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29717,7 +29681,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29733,7 +29697,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29749,7 +29713,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29765,7 +29729,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29781,7 +29745,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29797,7 +29761,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29813,7 +29777,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29829,7 +29793,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29845,7 +29809,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29861,7 +29825,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29877,7 +29841,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29893,7 +29857,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29909,7 +29873,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29925,7 +29889,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29941,7 +29905,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29957,7 +29921,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29973,7 +29937,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -29989,7 +29953,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -30005,7 +29969,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -30021,7 +29985,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -30037,7 +30001,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -30053,7 +30017,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -30069,7 +30033,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -30085,7 +30049,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -38121,7 +38085,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -38137,7 +38101,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -38153,7 +38117,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -38169,7 +38133,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -38185,7 +38149,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -38201,7 +38165,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -38217,7 +38181,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -38233,7 +38197,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -38249,7 +38213,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -38265,7 +38229,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -38281,7 +38245,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -38297,7 +38261,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -38313,7 +38277,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -38329,7 +38293,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -38345,7 +38309,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -38361,7 +38325,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -38377,7 +38341,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -38393,7 +38357,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -38409,7 +38373,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -38425,7 +38389,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -38441,7 +38405,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -38457,7 +38421,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -38473,7 +38437,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -38489,7 +38453,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -38505,7 +38469,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -49465,7 +49429,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -49481,7 +49445,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -49497,7 +49461,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -49513,7 +49477,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -49529,7 +49493,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -49545,7 +49509,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -49561,7 +49525,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -49577,7 +49541,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -49593,7 +49557,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -49609,7 +49573,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -49625,7 +49589,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -49641,7 +49605,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -49657,7 +49621,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -49673,7 +49637,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -49689,7 +49653,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -49705,7 +49669,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -49721,7 +49685,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -49737,7 +49701,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -49753,7 +49717,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -49769,7 +49733,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -49785,7 +49749,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -49801,7 +49765,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -49817,7 +49781,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -49833,7 +49797,7 @@
    "model": "BV55RE",
    "label": "BV55RE",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109310,7 +109274,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109326,7 +109290,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109342,7 +109306,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109358,7 +109322,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109374,7 +109338,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109390,7 +109354,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109406,7 +109370,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109422,7 +109386,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109438,7 +109402,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109454,7 +109418,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109470,7 +109434,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109486,7 +109450,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109502,7 +109466,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109518,7 +109482,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109534,7 +109498,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109550,7 +109514,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109566,7 +109530,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109582,7 +109546,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109598,7 +109562,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109614,7 +109578,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109630,7 +109594,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109646,7 +109610,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109662,7 +109626,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109678,7 +109642,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109694,7 +109658,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109710,7 +109674,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109726,7 +109690,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109742,7 +109706,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109758,7 +109722,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109774,7 +109738,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109790,7 +109754,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109806,7 +109770,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109822,7 +109786,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109838,7 +109802,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109854,7 +109818,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109870,7 +109834,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109886,7 +109850,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109902,7 +109866,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109918,7 +109882,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109934,7 +109898,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109950,7 +109914,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109966,7 +109930,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109982,7 +109946,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -109998,7 +109962,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110014,7 +109978,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110030,7 +109994,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110046,7 +110010,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110062,7 +110026,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110078,7 +110042,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110094,7 +110058,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110110,7 +110074,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110126,7 +110090,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110142,7 +110106,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110158,7 +110122,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110174,7 +110138,7 @@
    "model": "BL50T",
    "label": "BL50T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110190,7 +110154,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110206,7 +110170,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110222,7 +110186,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110238,7 +110202,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110254,7 +110218,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110270,7 +110234,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110286,7 +110250,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110302,7 +110266,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110318,7 +110282,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110334,7 +110298,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110350,7 +110314,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110366,7 +110330,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110382,7 +110346,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110398,7 +110362,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110414,7 +110378,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110430,7 +110394,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110446,7 +110410,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110462,7 +110426,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110478,7 +110442,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110494,7 +110458,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110510,7 +110474,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110526,7 +110490,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110542,7 +110506,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110558,7 +110522,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110574,7 +110538,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110590,7 +110554,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110606,7 +110570,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110622,7 +110586,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110638,7 +110602,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110654,7 +110618,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110670,7 +110634,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110686,7 +110650,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110702,7 +110666,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110718,7 +110682,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110734,7 +110698,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110750,7 +110714,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110766,7 +110730,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110782,7 +110746,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110798,7 +110762,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110814,7 +110778,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110830,7 +110794,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110846,7 +110810,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110862,7 +110826,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110878,7 +110842,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110894,7 +110858,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110910,7 +110874,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110926,7 +110890,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110942,7 +110906,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110958,7 +110922,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110974,7 +110938,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -110990,7 +110954,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111006,7 +110970,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111022,7 +110986,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111038,7 +111002,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111054,7 +111018,7 @@
    "model": "BL75T",
    "label": "BL75T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111070,7 +111034,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111086,7 +111050,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111102,7 +111066,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111118,7 +111082,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111134,7 +111098,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111150,7 +111114,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111166,7 +111130,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111182,7 +111146,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111198,7 +111162,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111214,7 +111178,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111230,7 +111194,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111246,7 +111210,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111262,7 +111226,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111278,7 +111242,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111294,7 +111258,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111310,7 +111274,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111326,7 +111290,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111342,7 +111306,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111358,7 +111322,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111374,7 +111338,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111390,7 +111354,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111406,7 +111370,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111422,7 +111386,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111438,7 +111402,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111454,7 +111418,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111470,7 +111434,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111486,7 +111450,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111502,7 +111466,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111518,7 +111482,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111534,7 +111498,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111550,7 +111514,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111566,7 +111530,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111582,7 +111546,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111598,7 +111562,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111614,7 +111578,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111630,7 +111594,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111646,7 +111610,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111662,7 +111626,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111678,7 +111642,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111694,7 +111658,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111710,7 +111674,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111726,7 +111690,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "untested",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111742,7 +111706,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111758,7 +111722,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111774,7 +111738,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111790,7 +111754,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111806,7 +111770,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111822,7 +111786,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111838,7 +111802,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111854,7 +111818,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111870,7 +111834,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111886,7 +111850,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111902,7 +111866,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111918,7 +111882,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
@@ -111934,7 +111898,7 @@
    "model": "BL100T",
    "label": "BL100T",
    "status": "ok",
-   "narsus": false,
+   "narsus": true,
    "notes": []
   },
   {
